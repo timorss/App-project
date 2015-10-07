@@ -1,0 +1,35 @@
+body {
+	margin: 0px;
+	direction: rtl;
+	text-align: center;
+}
+#rideme {
+
+	margin: 0 auto;
+	max-height: 500px;
+	max-width: 500px;
+}
+ul {
+
+	margin: 10px 300px;;
+}
+li {
+	float: right;
+	display: block;
+	font-size: 40px;
+	list-style-type: none;
+	width: 205px;
+	border: 3px solid black;
+	margin-top: 20px;
+	margin-right: 20px;
+}
+
+#find {
+	background-color: #00a8ff;
+}
+#adv {
+	background-color: #ff4a8e;
+}
+#contact {
+	background-color: #ffec4a;
+}
