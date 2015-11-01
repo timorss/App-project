@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="style.css">
+
 		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
 		Remove this if you use the .htaccess -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -19,17 +20,33 @@
 	</head>
 
 	<body>
-		<div>
+		<div id="container">
 			<header>
-				<img id="rideme" src="logo.png"></img>
+
+				<a href="index.html"><img id="rideme" src="logo.png" ></a>
+
 			</header>
-		<nav>
-			<ul>
-				<li id="find">חיפוש טרמפים</li>
-				<li id="adv">פרסום טרמפים</li>
-				<li id="contact">צור קשר</li>
-			</ul>
-		</nav>
+			<nav>
+				<ul>
+					<li id="search">
+						<a href="search.html"> חיפוש טרמפים </a><img class="car" src="car.png">
+					</li>
+					<li id="adv">
+						<a href="adv.html"> פרסום טרמפים </a><img class="car" src="car.png">
+					</li>
+					<li id="contact">
+						<a href="contact.html"> צור קשר </a><img class="car" src="car.png">
+					</li>
+				</ul>
+				
+			</nav>
+			<h1>
+				share a ride, save energy.
+			</h1>
+			<img id="car-share" src="car-share.gif">
+			<footer>
+				<a href="about.html">About RideWith</a>
+			</footer>
 		</div>
 	</body>
 </html>
