@@ -190,7 +190,15 @@ div#about h3 {
 		font-size: 1.6em;
 		text-align: right;
 		width: 80%;
+		
 	}
+	.search-adv-form img{
+	display: block;
+	position:absolute;
+	top:10%;
+	left:5%;
+	width:15%;
+}
 	form#instant-message {
 
 		margin-top: 0.5em;
