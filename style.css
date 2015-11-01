@@ -15,6 +15,7 @@ body {
 }
 
 #rideme {
+
 	width: 30%;
 }
 
@@ -37,13 +38,20 @@ li {
 	display: inline-block;
 	font-size: 2.5em;
 	list-style-type: none;
+	background-color: #ffcd7f;
 	border: 3px solid black;
 	margin-top: 0.5em;
 	margin-right: 0.3em;
 	width: 8em;
+	height: 1.2em;
+	-webkit-border-radius: 0.4em;
+	-webkit-box-shadow: rgb(110,110,110) 10px 10px 10px;
+	-webkit-transition: width 1s, background-color 1s;
 }
 li:hover {
-	border: 3px solid #bbff84;
+
+	width: 9em;
+	background-color: #1ec7e6;
 }
 li a {
 	display: block;
@@ -51,15 +59,6 @@ li a {
 	color: black;
 }
 
-#search {
-	background-color: #00a8ff;
-}
-#adv {
-	background-color: #ff4a8e;
-}
-#contact {
-	background-color: #ffec4a;
-}
 li a:hover, footer a:hover {
 	color: white;
 }
@@ -68,18 +67,20 @@ li:hover .car {
 }
 /*index h1*/
 h1 {
-	margin-top: 1em;
+	margin-top: 0.3em;
 	font-size: 5em;
 	direction: ltr;
 	color: #bbff84;
 }
 #car-share {
 	width: 60%;
+	margin-bottom: 1em;
+	margin-bottom: 1.5em;
 }
 
 /*search and advertising form*/
 .search-adv-form {
-
+	position:relative;
 	display: inline-block;
 	margin-top: 1em;
 	font-size: 2em;
@@ -88,6 +89,17 @@ h1 {
 	text-align: right;
 	background-color: #ccc;
 	width: 50%;
+	-webkit-box-shadow: rgb(110,110,110) 10px 10px 10px;
+}
+.search-adv-form img{
+	display: block;
+	position:absolute;
+	top:10%;
+	left:5%;
+	width:40%;
+}
+.search-adv-form:hover{
+	background: #1EC7E6;
 }
 div label {
 	float: right;
@@ -118,6 +130,7 @@ form#instant-message {
 	background-color: #ccc;
 	width: 50%;
 	text-align: right;
+	-webkit-box-shadow: rgb(110,110,110) 10px 10px 10px;
 }
 form#instant-message div label {
 	width: 3em;
@@ -139,9 +152,25 @@ footer {
 footer a {
 	color: black;
 }
+/*about*/
+div#about {
+
+	width: 60%;
+	background-color: #ccc;
+	display: inline-block;
+	margin-top: 2em;
+	font-size: 1.5em;
+	font-family: Arial;
+	line-height: 1.5em;
+	-webkit-box-shadow: rgb(110,110,110) 10px 10px 10px;
+}
+div#about h3 {
+
+	text-decoration: underline;
+}
 @media screen and (max-width: 415px) {
 	#rideme {
-		max-width: 40%;
+		max-width: 70%;
 	}
 	h1 {
 		font-size: 1.5em;
@@ -170,12 +199,20 @@ footer a {
 		text-align: right;
 		width: 90%;
 	}
-	form#instant-message textarea {
 
-	}
 	#car-share {
-	width: 80%;
-}
+		width: 80%;
+	}
+	div#about {
+
+		width: 80%;
+		display: inline-block;
+		margin-top: 2em;
+		font-size: 1em;
+		font-family: Arial;
+		line-height: 1.5em;
+	}
+
 	footer {
 		width: 100%;
 		height: 1em;
