@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="trempApp" lang="en">
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="media_screen.css">
 		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
 		Remove this if you use the .htaccess -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -16,6 +17,12 @@
 		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
 		<link rel="shortcut icon" href="/favicon.ico">
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	<style>
+		
+		#search{
+			background-color:#bbff84;
+			}		
+	</style>
 	</head>
 
 	<body>
@@ -24,6 +31,7 @@
 				<a href="index.html"><img id="rideme" src="logo.png" ></a>
 			</header>
 			<nav>
+
 				<ul>
 					<li id="search">
 						<a href="search.html"> חיפוש טרמפים </a><img class="car" src="car.png">
@@ -37,59 +45,73 @@
 				</ul>
 
 			</nav>
-			<form class="search-adv-form"><img class="car" src="car.png">
-				<div>
-					<label>מוצא:</label>
-					<select>
-						<option>אופקים</option>
-						<option>באר שבע</option>
-						<option>תל אביב</option>
-						<option>אופקים</option>
-						<option>אילת</option>
-					</select>
-				</div>
-
-				<div>
-					<label>יעד:</label>
-					<select>
-						<option>אופקים</option>
-						<option>באר שבע</option>
-						<option>תל אביב</option>
-						<option>אופקים</option>
-						<option>אילת</option>
-					</select>
-				</div>
-
-				<div id="date">
+			<form class="search-adv-form"><img Sclass="car" src="car.png">
+				<div ng-controller="trempConroller">
 					<div>
-						<label>תאריך:</label>
-						<input type="date" name="bday">
+						<label>מוצא:</label>
+						<select ng-model="src">
+							<option>אופקים</option>
+							<option>באר שבע</option>
+							<option>תל אביב</option>
+							<option>אופקים</option>
+							<option>אילת</option>
+						</select>
 					</div>
+
 					<div>
-						<label> שעה:</label>
-						<input type="time" name="usr_time">
+						<label>יעד:</label>
+						<select ng-model="dest">
+							<option>אופקים</option>
+							<option>באר שבע</option>
+							<option>תל אביב</option>
+							<option>אופקים</option>
+							<option>אילת</option>
+						</select>
+					</div>
+
+					<div id="date" >
+						<div>
+							<label>תאריך:</label>
+							<input type="date" ng-model="date">
+						</div>
+						<div>
+							<label> שעה:</label>
+							<input type="time" ng-model="time">
+						</div>
+					</div>
+
+					<div>
+						<label>השתתפות:</label>
+
+						<input type="number" min="0" max="120">
+						₪
+
+						<input type="radio" name="gas">
+						<span>ללא</span>
+					</div>
+
+					<div id="button">
+						<input type="button" value="חפש">
 					</div>
 				</div>
-
-				<div>
-					<label>השתתפות:</label>
-
-					<input type="number" min="0" max="120">
-					₪
-
-					<input type="radio" name="gas">
-					<span>ללא</span>
-				</div>
-
-				<div id="button">
-					<input type="button" value="חפש">
-				</div>
-
 			</form>
 
 			<footer>
 				<a href="about.html">About RideWith</a>
 			</footer>
 		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+		<script>
+			var app = angular.module("trempApp", []);
+
+			app.conroller("trempConroller", function($scope) {
+				$scope.tremps=[
+				{"src":"תל אביב", "dest":"באר שבע", "date":"18/11","time":"13:00"}
+				{"src":"אופקים", "dest":"תל אביב", "date":"15/11","time":"18:00"}
+				]
+
+			});
+
+		</script>
 	</body>
 </html>
