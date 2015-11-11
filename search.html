@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<link rel="stylesheet" type="text/css" href="media_screen.css">
+		<link rel="stylesheet" type="text/css" href="search-tremps-style.css">
 		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
 		Remove this if you use the .htaccess -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -17,12 +18,11 @@
 		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
 		<link rel="shortcut icon" href="/favicon.ico">
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-	<style>
-		
-		#search{
-			background-color:#bbff84;
-			}		
-	</style>
+		<style>
+			#search {
+				background-color: #bbff84;
+			}
+		</style>
 	</head>
 
 	<body>
@@ -45,12 +45,13 @@
 				</ul>
 
 			</nav>
-			<form class="search-adv-form"><img Sclass="car" src="car.png">
-				<div ng-controller="trempConroller">
+			<div ng-controller="trempConroller">
+				<form class="search-adv-form"><img src="car.png">
+
 					<div>
 						<label>מוצא:</label>
 						<select ng-model="src">
-							<option>אופקים</option>
+							<option >אופקים</option>
 							<option>באר שבע</option>
 							<option>תל אביב</option>
 							<option>אופקים</option>
@@ -61,7 +62,7 @@
 					<div>
 						<label>יעד:</label>
 						<select ng-model="dest">
-							<option>אופקים</option>
+							<option value="">אופקים</option>
 							<option>באר שבע</option>
 							<option>תל אביב</option>
 							<option>אופקים</option>
@@ -93,9 +94,17 @@
 					<div id="button">
 						<input type="button" value="חפש">
 					</div>
-				</div>
-			</form>
 
+				</form>
+
+				<div id="tremps" ng-repeat="x in tremps | filter: src | filter: dest">
+					<span >{{x.src}}</span>
+					<span> {{x.dest}}</span>
+					<span ng-model="date">{{x.date}}</span>
+					<span ng-model="time">{{x.time}}</span>
+				</div>
+
+			</div>
 			<footer>
 				<a href="about.html">About RideWith</a>
 			</footer>
@@ -104,11 +113,23 @@
 		<script>
 			var app = angular.module("trempApp", []);
 
-			app.conroller("trempConroller", function($scope) {
-				$scope.tremps=[
-				{"src":"תל אביב", "dest":"באר שבע", "date":"18/11","time":"13:00"}
-				{"src":"אופקים", "dest":"תל אביב", "date":"15/11","time":"18:00"}
-				]
+			app.controller("trempConroller", function($scope, $http) {
+				$scope.tremps = [{
+					"src" : "תל אביב",
+					"dest" : "באר שבע",
+					"date" : "18/11",
+					"time" : "13:00"
+				}, {
+					"src" : "אופקים",
+					"dest" : "תל אביב",
+					"date" : "15/11",
+					"time" : "18:00"
+				}, {
+					"src" : "אילת",
+					"dest" : "באר שבע",
+					"date" : "15/11",
+					"time" : "18:00"
+				}];
 
 			});
 

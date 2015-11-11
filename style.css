@@ -59,7 +59,6 @@ li a {
 	display: block;
 	text-decoration: none;
 	color: black;
-	
 }
 
 li a:hover, footer a:hover {
@@ -89,20 +88,19 @@ h1 {
 	margin-top: 1em;
 	font-size: 2em;
 	font-weight: bold;
-
 	text-align: right;
 	background-color: #ccc;
 	width: 50%;
 	-webkit-box-shadow: rgb(110,110,110) 10px 10px 10px;
 }
 .search-adv-form img {
- display: block;
- position: absolute;
- top: 10%;
- left: 5%;
- width: 30%;
- }
-form#instant-message:hover, .search-adv-form:hover, div#about:hover {
+	display: block;
+	position: absolute;
+	top: 10%;
+	left: 5%;
+	width: 30%;
+}
+form#instant-message:hover, form.search-adv-form:hover, div#about:hover {
 	background: #1EC7E6;
 }
 .search-adv-form div label {
@@ -111,7 +109,6 @@ form#instant-message:hover, .search-adv-form:hover, div#about:hover {
 div label {
 	float: right;
 	text-align: left;
-
 	clear: right;
 	margin-left: 0.5em;
 }
@@ -128,6 +125,7 @@ select, input {
 /*contact form*/
 
 form#instant-message {
+	position: relative;
 	display: inline-block;
 	margin-top: 1em;
 	margin-bottom: 1.5em;
@@ -139,9 +137,7 @@ form#instant-message {
 	text-align: right;
 	-webkit-box-shadow: rgb(110,110,110) 10px 10px 10px;
 }
-{
-background: #1EC7E6;
-}
+
 form#instant-message div label {
 	width: 3em;
 }
@@ -182,7 +178,6 @@ div#about {
 	-webkit-box-shadow: rgb(110,110,110) 10px 10px 10px;
 }
 div#about h3 {
-
 	text-decoration: underline;
 }
 
