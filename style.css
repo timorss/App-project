@@ -129,6 +129,7 @@ form#instant-message {
 	display: inline-block;
 	margin-top: 1em;
 	margin-bottom: 1.5em;
+	padding-top: 0.5em;
 	font-size: 2em;
 	font-weight: bold;
 	line-height: 1.5em;
@@ -139,7 +140,10 @@ form#instant-message {
 }
 
 form#instant-message div label {
-	width: 3em;
+	width: 8em;
+}
+#third_label {
+	margin-top: 0.5em;
 }
 #mail {
 	float: left;
@@ -149,7 +153,7 @@ form#instant-message div label {
 	color: #808080;
 }
 #send-button {
-	margin-right: 3.5em;
+	margin-right: 8.5em;
 }
 
 footer {

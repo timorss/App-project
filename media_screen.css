@@ -12,10 +12,8 @@
 		font-size: 2em;
 		list-style-type: none;
 		border: 3px solid black;
-	
 		width: 80%;
 		margin: 0.5em auto;
-			
 	}
 	.search-adv-form {
 
@@ -26,19 +24,32 @@
 		width: 80%;
 	}
 	.search-adv-form img {
-	 display: block;
-	 position: absolute;
-	 top: 10%;
-	 left: 5%;
-	 width: 15%;
-	 }
+		display: block;
+		position: absolute;
+		top: 10%;
+		left: 5%;
+		width: 15%;
+	}
 	form#instant-message {
 		line-height: 2em;
 		margin-top: 0.5em;
 		margin-bottom: 2em;
 		font-size: 1.1em;
-		text-align: right;
+		text-align: center;
 		width: 90%;
+	}
+
+	form#instant-message label {
+		display: none;
+		
+	}
+	#send-button {
+		
+			
+			margin:0 auto;
+			margin-left:11em;
+			
+		
 	}
 
 	#car-share {
@@ -67,7 +78,7 @@
 	}
 }
 
-@media screen and (min-width: 600px) and (max-width:1025px)  {
+@media screen and (min-width: 600px) and (max-width: 1025px) {
 
 	#rideme {
 		margin-top: 1em;
@@ -84,7 +95,6 @@
 		border: 3px solid black;
 		margin-right: 1em;
 		width: 33%;
-		
 	}
 	.search-adv-form {
 
@@ -95,14 +105,14 @@
 		width: 80%;
 	}
 	.search-adv-form img {
-	 display: block;
-	 position: absolute;
-	 top: 10%;
-	 left: 5%;
-	 width: 30%;
-	 }
+		display: block;
+		position: absolute;
+		top: 10%;
+		left: 5%;
+		width: 30%;
+	}
 	form#instant-message {
-	
+
 		margin-top: 1em;
 		margin-bottom: 2em;
 		font-size: 1.5em;
@@ -119,17 +129,10 @@
 		width: 80%;
 		display: inline-block;
 		margin-top: 2em;
-				margin-bottom: 2em;
+		margin-bottom: 2em;
 		font-size: 1.3em;
 		font-family: Arial;
 		line-height: 1.5em;
 	}
 
-
-	
-
-
-
-
-	
 }
