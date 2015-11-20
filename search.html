@@ -28,7 +28,7 @@
 	<body>
 		<div>
 			<header>
-				<a href="index.html"><img id="rideme" src="logo.png" ></a>
+				<a href="index.html"><img id="rideme" src="logo2.png" ></a>
 			</header>
 			<nav>
 
@@ -50,8 +50,8 @@
 
 					<div>
 						<label>מוצא:</label>
-						<select ng-model="src">
-							<option >אופקים</option>
+						<select ng-model="query.src">
+							<option>אופקים</option>
 							<option>באר שבע</option>
 							<option>תל אביב</option>
 							<option>אופקים</option>
@@ -61,7 +61,7 @@
 
 					<div>
 						<label>יעד:</label>
-						<select ng-model="dest">
+						<select ng-model="query.dest">
 							<option >אופקים</option>
 							<option>באר שבע</option>
 							<option>תל אביב</option>
@@ -73,48 +73,55 @@
 					<div id="date" >
 						<div>
 							<label>תאריך:</label>
-							<input type="date" ng-model="date">
+							<input type="datetime" ng-model="query.date">
 						</div>
 						<div>
 							<label> שעה:</label>
-							<input type="time" ng-model="time">
+							<input type="time" ng-model="query.time">
+
 						</div>
 					</div>
 
 					<div>
 						<label>השתתפות:</label>
 
-						<input type="number" min="0" max="120">
+						<input type="number" min="0" max="120" value="{{x.payment}}" ng-model="query.payment">
 						₪
 
-						<input type="radio" name="gas">
+						<input type="radio" name="gas" value="0" ng-model="query.payment">
 						<span>ללא</span>
 					</div>
 
-					<div id="button">
-						<input type="button" value="חפש">
-					</div>
-
 				</form>
-				<Table border="4">
+
+				<table id="table" >
+					<div id="results">
+						נמצאו {{filtered.length}} טרמפים
+					</div>
 					<tr>
 						<th>מוצא:</th>
 						<th>יעד:</th>
 						<th>תאריך:</th>
 						<th>שעה:</th>
+						<th>השתתפות:</th>
+						<th>שם:</th>
+						<th></th>
 					</tr>
-					<tr ng-repeat="x in tremps | filter: src |filter: dest">
+					<tr ng-repeat="x in filtered = (tremps | filter: query :true)">
+
 						<td>{{x.src}}</td>
 						<td>{{x.dest}}</td>
 						<td>{{x.date}}</td>
 						<td>{{x.time}}</td>
+						<td>{{x.payment}} ₪</td>
+						<td>{{x.driver}}</td>
+						<td>צור קשר</td>
 					</tr>
-				</Table>
+				</table>
 
 			</div>
 			<footer>
 				<a href="about.html">About RideWith</a>
-				<span class="likebtn-wrapper" data-theme="github" data-lang="auto" data-identifier="likeButton1"></span>
 
 			</footer>
 		</div>

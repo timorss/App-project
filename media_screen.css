@@ -30,6 +30,20 @@
 		left: 5%;
 		width: 15%;
 	}
+	table#table {
+
+		font-size: 1em;
+	}
+#results {
+
+
+	
+	width:50%;
+
+	font-size: 1.5em;
+
+
+}
 	form#instant-message {
 		line-height: 2em;
 		margin-top: 0.5em;
@@ -41,15 +55,11 @@
 
 	form#instant-message label {
 		display: none;
-		
 	}
 	#send-button {
-		
-			
-			margin:0 auto;
-			margin-left:11em;
-			
-		
+
+		margin: 0 auto;
+		margin-left: 11em;
 	}
 
 	#car-share {
@@ -99,7 +109,7 @@
 	.search-adv-form {
 
 		margin-top: 1em;
-		margin-bottom: 1.5em;
+margin-bottom:1.5em;
 		font-size: 1.8em;
 		text-align: right;
 		width: 80%;
@@ -111,6 +121,14 @@
 		left: 5%;
 		width: 30%;
 	}
+	table#table {
+		font-size: 1.5em;
+	}
+	#results {
+	width:40%;
+	font-size:2em;
+	}
+	
 	form#instant-message {
 
 		margin-top: 1em;
