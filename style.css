@@ -2,7 +2,7 @@ body {
 	background-color: #b1b6ff;
 	direction: rtl;
 	text-align: center;
-		font-family:Arial;
+	font-family: Arial;
 }
 * {
 
@@ -71,10 +71,17 @@ li:hover .car {
 
 /*index----------------------------------------------------------------------------------*/
 h1 {
+	margin: 0 auto;
 	margin-top: 0.3em;
 	font-size: 3em;
 	direction: ltr;
-	color: #bbff84;
+	color: #E86B0C;
+	margin-bottom: 0.1em;
+	width: 50%;
+	background-color: #FFA10D;
+	font-size: 3em;
+	font-weight: bold;
+	-webkit-border-radius: 0.5em;
 }
 #car-share {
 	width: 30%;
@@ -88,7 +95,7 @@ h1 {
 	position: relative;
 	display: inline-block;
 	margin-top: 1em;
-		margin-bottom: 2em;
+	margin-bottom: 2em;
 	padding: 0.2em 0;
 	font-size: 2em;
 	font-weight: bold;
@@ -107,8 +114,8 @@ h1 {
 
 table#table {
 
-	margin-top:0.1em;
-	margin-bottom:1.5em;
+	margin-top: 0.1em;
+	margin-bottom: 1.5em;
 	width: 80%;
 	font-size: 2em;
 	border: none;
@@ -118,7 +125,7 @@ table#table {
 #results {
 	color: white;
 	margin: 0 auto;
-margin-bottom:0.1em;
+	margin-bottom: 0.1em;
 	width: 30%;
 	background-color: #C48251;
 	font-size: 3em;
@@ -130,6 +137,7 @@ table#table th {
 	background-color: #CC510A;
 	border-bottom: 0.1em solid black;
 }
+
 table#table tr {
 	background-color: #CC870A;
 	line-height: 1.5em;
@@ -224,4 +232,6 @@ div#about {
 div#about h3 {
 	text-decoration: underline;
 }
-
+tr td:focus
+	height:5em;
+}

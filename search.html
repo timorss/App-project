@@ -43,14 +43,15 @@
 						<a href="contact.html"> צור קשר </a><img class="car" src="car.png">
 					</li>
 				</ul>
-
+	
 			</nav>
 			<div ng-controller="trempController">
 				<form class="search-adv-form"><img src="car.png">
 
 					<div>
 						<label>מוצא:</label>
-						<select ng-model="query.src">
+						<select ng-model="query.src" ng-click="checkNoTremps()">						
+					
 							<option>אופקים</option>
 							<option>באר שבע</option>
 							<option>תל אביב</option>
@@ -61,7 +62,7 @@
 
 					<div>
 						<label>יעד:</label>
-						<select ng-model="query.dest">
+						<select ng-model="query.dest" ng-click="checkNoTremps()">
 							<option >אופקים</option>
 							<option>באר שבע</option>
 							<option>תל אביב</option>
@@ -73,11 +74,11 @@
 					<div id="date" >
 						<div>
 							<label>תאריך:</label>
-							<input type="datetime" ng-model="query.date">
+							<input id="date" type="date" ng-model="query.date" >
 						</div>
 						<div>
 							<label> שעה:</label>
-							<input type="time" ng-model="query.time">
+							<input id="time" type="time" ng-model="query.time">
 
 						</div>
 					</div>
@@ -88,15 +89,16 @@
 						<input type="number" min="0" max="120" value="{{x.payment}}" ng-model="query.payment">
 						₪
 
-						<input type="radio" name="gas" value="0" ng-model="query.payment">
+						<input type="radio" name="gas" ng-value=0 ng-model="query.payment">
 						<span>ללא</span>
 					</div>
 
 				</form>
 
 				<table id="table" >
+					
 					<div id="results">
-						נמצאו {{filtered.length}} טרמפים
+						נמצאו <span id="length">{{filtered.length}}</span> טרמפים
 					</div>
 					<tr>
 						<th>מוצא:</th>
@@ -109,13 +111,14 @@
 					</tr>
 					<tr ng-repeat="x in filtered = (tremps | filter: query :true)">
 
-						<td>{{x.src}}</td>
-						<td>{{x.dest}}</td>
-						<td>{{x.date}}</td>
-						<td>{{x.time}}</td>
-						<td>{{x.payment}} ₪</td>
-						<td>{{x.driver}}</td>
-						<td>צור קשר</td>
+						<td class="tdl" onclick="td()">{{x.src}}</td>
+						<td class="td">{{x.dest}}</td>
+						<td class="td">{{x.date}}</td>
+						<td class="td">{{x.time}}</td>
+						<td class="td">{{x.payment}} ₪</td>
+						<td class="td">{{x.driver}}</td>
+						<td class="td">צור קשר</td>
+
 					</tr>
 				</table>
 
@@ -136,7 +139,31 @@
 				}).error(function(data, status, headers, config) {
 					alert("שגיאה");
 				});
+
+				$scope.checkNoTremps = function() {
+					var results = document.getElementById("results");
+					var length = document.getElementById("length");
+
+					if (length.innerText === "0") {
+						results.innerText="לא נמצאו טרמפים";
+					};
+				};
 			});
+
+			app.directive('places', function() {
+				return {
+					restrict : 'E',
+					templateUrl : 'places.html'
+				};
+			});
+
+
+
+
+			function td() {
+				var tdl = document.getElementsByClassName("td");
+				tdl.style.color = "red";
+			}
 		</script>
 	</body>
 </html>

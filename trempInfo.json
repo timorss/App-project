@@ -4,15 +4,18 @@
 		"dest": "באר שבע",
 		"date": "22/01",
 		"time": "14:00",
-		"payment": "20",
+		"payment":20,
+		"seats":2,
 		"driver": "בני",
 		"number": "052-4132681"
+		
 	},	{
 		"src": "תל אביב",
 		"dest": "באר שבע",
 		"date": "09/02",
 		"time": "13:00",
-		"payment": "10",
+		"payment": 10,
+		"seats":3,
 		"driver": "דורון",
 		"number": "052-4019281"
 	}, {
@@ -20,7 +23,8 @@
 		"dest": "תל אביב",
 		"date": "15/11",
 		"time": "18:00",
-		"payment": "0",
+		"payment": 0,
+		"seats":1,
 		"driver": "שלומי",
 		"number": "052-4268021"
 	}, {
@@ -28,23 +32,26 @@
 		"dest": "באר שבע",
 		"date": "15/12",
 		"time": "22:00",
-		"payment": "20",
+		"payment": 20,
+		"seats":4,
 		"driver": "אביה",
 		"number": "052-5486213"
 	}, {
 		"src": "תל אביב",
 		"dest": "אופקים",
 		"date": "18/11",
-		"time": "10:00",
-		"payment": "30",
+		"time": "7:00",
+		"payment": 30,
+		"seats":2,
 		"driver": "עדיאל",
 		"number": "052-3161744"
 	}, {
 		"src": "תל אביב",
 		"dest": "אילת",
-		"date": "18/12",
+		"date": "18/12/2015",
 		"time": "13:00",
-		"payment": "25",
+		"payment": 25,
+		"seats":1,
 		"driver": "שיר",
 		"number": "052-6411768"
 	}, {
@@ -52,7 +59,8 @@
 		"dest": "באר שבע",
 		"date": "18/11",
 		"time": "14:00",
-		"payment": "0",
+		"payment": 0,
+		"seats":2,
 		"driver": "רוני",
 		"number": "052-4213157"
 	}, {
@@ -61,6 +69,7 @@
 		"date": "09/01",
 		"time": "18:00",
 		"payment": "35",
+		"seats":3,
 		"driver": "דני",
 		"number": "052-4461389"
 	}
