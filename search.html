@@ -68,7 +68,7 @@
 
 					<div>
 						<label>יעד:</label>
-						<select ng-model="query.dest" ng-click="checkNoTremps()">
+						<select ng-model="query.dest" ng-click="checkNoTremps1()">
 							<option >אופקים</option>
 							<option>באר שבע</option>
 							<option>תל אביב</option>
@@ -77,10 +77,10 @@
 						</select>
 					</div>
 
-					<div id="date" >
+					<div id="date&time" >
 						<div>
 							<label>תאריך:</label>
-							<input id="date" type="date" ng-model="query.date" >
+							<input type="date" id="date" ng-model="query.date" >
 						</div>
 						<div>
 							<label> שעה:</label>
@@ -163,7 +163,7 @@
 						results.style.display = "block";
 						results2.style.display = "none";
 						
-						} else if (length2.innerText > "0") {
+						} else if (length2.innerText > 0) {
 						results.style.display = "none";
 						results2.style.display = "block";
 					
