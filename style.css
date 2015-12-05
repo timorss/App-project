@@ -1,42 +1,42 @@
 body {
-	background-color: #b1b6ff;
-	direction: rtl;
-	text-align: center;
-	font-family: Arial;
+background-color: #b1b6ff;
+direction: rtl;
+text-align: center;
+font-family: Arial;
 }
 * {
 
 	padding: 0px;
 	margin: 0px;
-}
-#container {
+	}
+	#container {
 	width: 100%;
 	height: 100%;
 	position: relative;
-}
+	}
 
-#rideme {
+	#rideme {
 	margin-top: 1.5em;
 	margin-bottom: 0em;
 	width: 30%;
 	border-bottom: 0.3em solid #b1b6ff;
-}
+	}
 
-#rideme:hover {
+	#rideme:hover {
 	border-bottom: 0.3em solid #bbff84;
-}
-ul {
+	}
+	ul {
 
 	margin: 0 auto;
-}
-.car {
+	}
+	.car {
 	display: none;
 	position: absolute;
 	left: 42%;
 	bottom: 120%;
 	width: 1em;
-}
-li {
+	}
+	li {
 	position: relative;
 	display: inline-block;
 	font-size: 2.5em;
@@ -50,27 +50,27 @@ li {
 	-webkit-border-radius: 0.5em;
 	-webkit-box-shadow: rgb(110,110,110) 10px 10px 10px;
 	-webkit-transition: width 1s, background-color 1s;
-}
-li:hover {
+	}
+	li:hover {
 
 	width: 9em;
 	background-color: #1ec7e6;
-}
-li a {
+	}
+	li a {
 	display: block;
 	text-decoration: none;
 	color: black;
-}
+	}
 
-li a:hover, footer a:hover {
+	li a:hover, footer a:hover {
 	color: white;
-}
-li:hover .car {
+	}
+	li:hover .car {
 	display: block;
-}
+	}
 
-/*index----------------------------------------------------------------------------------*/
-h1 {
+	/*index----------------------------------------------------------------------------------*/
+	h1 {
 	margin: 0 auto;
 	margin-top: 0.3em;
 	font-size: 3em;
@@ -82,15 +82,15 @@ h1 {
 	font-size: 3em;
 	font-weight: bold;
 	-webkit-border-radius: 0.5em;
-}
-#car-share {
+	}
+	#car-share {
 	width: 30%;
 	margin-bottom: 1em;
 	margin-bottom: 1.5em;
-}
+	}
 
-/*search and advertising form----------------------------------------------------------------------------------*/
-.search-adv-form {
+	/*search and advertising form----------------------------------------------------------------------------------*/
+	.search-adv-form {
 
 	position: relative;
 	display: inline-block;
@@ -103,16 +103,16 @@ h1 {
 	background-color: #ccc;
 	width: 50%;
 	-webkit-box-shadow: rgb(110,110,110) 10px 10px 10px;
-}
-.search-adv-form img {
+	}
+	.search-adv-form img {
 	display: block;
 	position: absolute;
 	top: 10%;
 	left: 5%;
 	width: 30%;
-}
+	}
 
-table#table {
+	table#table {
 
 	margin-top: 0.1em;
 	margin-bottom: 1.5em;
@@ -120,9 +120,9 @@ table#table {
 	font-size: 2em;
 	border: none;
 	border-collapse: collapse;
-}
+	}
 
-#results {
+	#results , #results2{
 	color: white;
 	margin: 0 auto;
 	margin-bottom: 0.1em;
@@ -130,49 +130,51 @@ table#table {
 	background-color: #C48251;
 	font-size: 3em;
 	font-weight: bold;
-}
+	}
 
-table#table th {
-	
+	table#table th {
+
 	background-color: #CC510A;
 	border-bottom: 0.1em solid black;
-}
-
-table#table tr {
+	}
+	#td{
+	cursor: pointer;
+	}
+	table#table tr {
 	background-color: #CC870A;
 	line-height: 1.5em;
-}
-table#table td {
+	}
+	table#table td {
 	border-bottom: 0.1em solid #b1b6ff;
-}
-table#table tr:hover {
+	}
+	table#table tr:hover {
 	background-color: #CC5153;
-}
-form#instant-message:hover, form.search-adv-form:hover, div#about:hover {
+	}
+	form#instant-message:hover, form.search-adv-form:hover, div#about:hover {
 	background: #1EC7E6;
-}
-.search-adv-form div label {
+	}
+	.search-adv-form div label {
 	width: 4em;
-}
-div label {
+	}
+	div label {
 	float: right;
 	text-align: left;
 	clear: right;
 	margin-left: 0.8em;
-}
-div span {
+	}
+	div span {
 	font-size: 0.8em;
-}
-select, input {
+	}
+	select, input {
 
 	text-align: right;
-}
-#button {
+	}
+	#button {
 	margin-right: 4.5em;
-}
-/*contact form----------------------------------------------------------------------------------*/
+	}
+	/*contact form----------------------------------------------------------------------------------*/
 
-form#instant-message {
+	form#instant-message {
 	position: relative;
 	display: inline-block;
 	margin-top: 1em;
@@ -185,26 +187,26 @@ form#instant-message {
 	width: 50%;
 	text-align: right;
 	-webkit-box-shadow: rgb(110,110,110) 10px 10px 10px;
-}
+	}
 
-form#instant-message div label {
+	form#instant-message div label {
 	width: 8em;
-}
-#third_label {
+	}
+	#third_label {
 	margin-top: 0.5em;
-}
-#mail {
+	}
+	#mail {
 	float: left;
 	font-size: 0.8em;
 	font-weight: bold;
 	margin-left: 0.5em;
 	color: #808080;
-}
-#send-button {
+	}
+	#send-button {
 	margin-right: 8.5em;
-}
+	}
 
-footer {
+	footer {
 	width: 100%;
 	height: 1em;
 	border-top: 0.1em solid gray;
@@ -213,12 +215,12 @@ footer {
 	background-color: #ffcd7f;
 	color: black;
 	font-size: 1.5em;
-}
-footer a {
+	}
+	footer a {
 	color: black;
-}
-/*about----------------------------------------------------------------------------------*/
-div#about {
+	}
+	/*about----------------------------------------------------------------------------------*/
+	div#about {
 
 	width: 60%;
 	background-color: #ccc;
@@ -228,10 +230,10 @@ div#about {
 	font-family: Arial;
 	line-height: 1.5em;
 	-webkit-box-shadow: rgb(110,110,110) 10px 10px 10px;
-}
-div#about h3 {
+	}
+	div#about h3 {
 	text-decoration: underline;
-}
-tr td:focus
+	}
+	tr td:focus
 	height:5em;
 }

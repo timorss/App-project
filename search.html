@@ -22,6 +22,9 @@
 			#search {
 				background-color: #bbff84;
 			}
+			[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+				display: none !important;
+			}
 		</style>
 	</head>
 
@@ -43,15 +46,18 @@
 						<a href="contact.html"> צור קשר </a><img class="car" src="car.png">
 					</li>
 				</ul>
-	
+
 			</nav>
+
+			<!--controller------------------------------------------------------------------------------->
+
 			<div ng-controller="trempController">
 				<form class="search-adv-form"><img src="car.png">
 
 					<div>
 						<label>מוצא:</label>
-						<select ng-model="query.src" ng-click="checkNoTremps()">						
-					
+						<select ng-model="query.src" ng-click="checkNoTremps()">
+
 							<option>אופקים</option>
 							<option>באר שבע</option>
 							<option>תל אביב</option>
@@ -86,7 +92,7 @@
 					<div>
 						<label>השתתפות:</label>
 
-						<input type="number" min="0" max="120" value="{{x.payment}}" ng-model="query.payment">
+						<input type="number" min="0" max="120" value="{{x.payment}}" ng-model="query.payment" >
 						₪
 
 						<input type="radio" name="gas" ng-value=0 ng-model="query.payment">
@@ -95,11 +101,16 @@
 
 				</form>
 
-				<table id="table" >
-					
-					<div id="results">
-						נמצאו <span id="length">{{filtered.length}}</span> טרמפים
+				
+
+					<div id="results" style="display: none" ng-cloak>
 					</div>
+
+					<div id="results2" ng-cloak>
+						<span id="length2">{{filtered.length}}</span> טרמפים במאגר
+					</div>
+					
+					<table id="table" >
 					<tr>
 						<th>מוצא:</th>
 						<th>יעד:</th>
@@ -109,15 +120,15 @@
 						<th>שם:</th>
 						<th></th>
 					</tr>
-					<tr ng-repeat="x in filtered = (tremps | filter: query :true)">
+					<tr id ="tremprepeat" ng-repeat="x in filtered = (tremps | filter: query :true)">
 
-						<td class="tdl" onclick="td()">{{x.src}}</td>
-						<td class="td">{{x.dest}}</td>
-						<td class="td">{{x.date}}</td>
-						<td class="td">{{x.time}}</td>
-						<td class="td">{{x.payment}} ₪</td>
-						<td class="td">{{x.driver}}</td>
-						<td class="td">צור קשר</td>
+						<td ng-cloak>{{x.src}}</td>
+						<td ng-cloak>{{x.dest}}</td>
+						<td ng-cloak>{{x.date}}</td>
+						<td ng-cloak>{{x.time}}</td>
+						<td ng-cloak>{{x.payment}} ₪</td>
+						<td ng-cloak>{{x.driver}}</td>
+						<td class="td-contact" id="td" onclick="openTd()" ng-cloak><img id="downarrow" src="arrowdown.png"></td>
 
 					</tr>
 				</table>
@@ -142,11 +153,22 @@
 
 				$scope.checkNoTremps = function() {
 					var results = document.getElementById("results");
-					var length = document.getElementById("length");
+					var results2 = document.getElementById("results2");
 
-					if (length.innerText === "0") {
-						results.innerText="לא נמצאו טרמפים";
-					};
+					
+					var length2 = document.getElementById("length2");
+
+					if (length2.innerText === "0") {
+						results.innerText = "לצערנו, לא נמצאו טרמפים";
+						results.style.display = "block";
+						results2.style.display = "none";
+						
+						} else if (length2.innerText > "0") {
+						results.style.display = "none";
+						results2.style.display = "block";
+					
+						
+					}
 				};
 			});
 
@@ -159,11 +181,6 @@
 
 
 
-
-			function td() {
-				var tdl = document.getElementsByClassName("td");
-				tdl.style.color = "red";
-			}
 		</script>
 	</body>
 </html>

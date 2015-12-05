@@ -34,7 +34,11 @@
 
 		font-size: 1em;
 	}
-	#results {
+	#downarrow{
+		width:1.5em;
+		
+		}
+	#results, #results2 {
 
 		width: 50%;
 		font-size: 1.5em;
@@ -119,7 +123,7 @@
 	table#table {
 		font-size: 1.5em;
 	}
-	#results {
+	#results , #results2{
 		width: 40%;
 		font-size: 2em;
 	}
@@ -154,5 +158,10 @@
 
 	.search-adv-form {
 		font-size: 1em;
+		
+	}
+		#results , #results2{
+		width: 60%;
+		font-size: 1.6em;
 	}
 }
