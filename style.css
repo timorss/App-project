@@ -112,11 +112,45 @@ font-family: Arial;
 	width: 30%;
 	}
 
+	/*----------------------------------- ניסוי      טבלה     בצורה      שונה  ------------------------------------
+	#big-div-table{
+	margin:0 auto;
+	margin-top: 0.1em;
+	margin-bottom: 1.5em;
+	width: 80%;
+	font-size: 2em;
+	
+	}
+	#big-div-table #head{
+	background-color: #CC510A;
+	border-bottom: 0.1em solid black;
+	}
+	#big-div-table #head div{
+	font-weight:bold;
+	overflow:hidden;
+	display:inline-block;
+	width:14%;
+	}
+
+	#divtremp div{
+	display:inline-block;
+	overflow:hidden;
+	
+	border:1px solid green;
+	width:14%;	
+	}
+	
+	#divtremp{
+	background-color: #CC870A;
+	line-height: 1.5em;
+		border-bottom: 0.1em solid #b1b6ff;
+	}
+	/*-----------------------------------------------------------------------*/
 	table#table {
 
 	margin-top: 0.1em;
 	margin-bottom: 1.5em;
-	width: 80%;
+	
 	font-size: 2em;
 	border: none;
 	border-collapse: collapse;
@@ -137,9 +171,7 @@ font-family: Arial;
 	background-color: #CC510A;
 	border-bottom: 0.1em solid black;
 	}
-	#td{
-	cursor: pointer;
-	}
+
 	table#table tr {
 	background-color: #CC870A;
 	line-height: 1.5em;

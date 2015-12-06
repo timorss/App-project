@@ -56,7 +56,7 @@
 
 					<div>
 						<label>מוצא:</label>
-						<select ng-model="query.src" ng-click="checkNoTremps()">
+						<select id="src" ng-model="query.src" ng-click="checkNoTremps()">
 
 							<option>אופקים</option>
 							<option>באר שבע</option>
@@ -68,7 +68,7 @@
 
 					<div>
 						<label>יעד:</label>
-						<select ng-model="query.dest" ng-click="checkNoTremps1()">
+						<select ng-model="query.dest" ng-click="checkNoTremps()">
 							<option >אופקים</option>
 							<option>באר שבע</option>
 							<option>תל אביב</option>
@@ -101,16 +101,59 @@
 
 				</form>
 
-				
+				<div id="results" style="display: none" ng-cloak></div>
 
-					<div id="results" style="display: none" ng-cloak>
+				<div id="results2" ng-cloak>
+					<span id="length2">{{filtered.length}}</span> טרמפים במאגר
+				</div>
+				<!-----------------------ניסוי      טבלה     בצורה      שונה----------------------
+				<div id="big-div-table">
+					<div id="head">
+						<div>
+							מוצא:
+						</div>
+						<div>
+							יעד:
+						</div>
+						<div>
+							תאריך:
+						</div>
+						<div>
+							שעה:
+						</div>
+						<div>
+							השתתפות:
+						</div>
+
+					</div>
+					<div id="divtremp" ng-repeat="x in filtered = (tremps | filter: query :true)">
+
+						<div ng-cloak>
+							{{x.src}}
+						</div>
+						<div ng-cloak>
+							{{x.dest}}
+						</div>
+						<div ng-cloak>
+							{{x.date}}
+						</div>
+						<div ng-cloak>
+							{{x.time}}
+						</div>
+						<div ng-cloak>
+							{{x.payment}} ₪
+						</div>
+
+						<div class="td-contact" id="td" onclick="openTddiv()" ng-cloak><img id="downarrow" src="arrowdown.png">
+						</div>
+						<div id="open" style="display: none" ng-cloak>
+							{{x.driver}}
+						</div>
 					</div>
 
-					<div id="results2" ng-cloak>
-						<span id="length2">{{filtered.length}}</span> טרמפים במאגר
-					</div>
-					
-					<table id="table" >
+				</div>
+				<!----------------------------------------------------------------------------------------->
+				<table id="table" >
 					<tr>
 						<th>מוצא:</th>
 						<th>יעד:</th>
@@ -120,7 +163,7 @@
 						<th>שם:</th>
 						<th></th>
 					</tr>
-					<tr id ="tremprepeat" ng-repeat="x in filtered = (tremps | filter: query :true)">
+					<tr id={{x.id}} ng-click="openTd(x.id)"  class="repeat" ng-repeat="x in filtered = (tremps | filter: query :true)">
 
 						<td ng-cloak>{{x.src}}</td>
 						<td ng-cloak>{{x.dest}}</td>
@@ -128,7 +171,7 @@
 						<td ng-cloak>{{x.time}}</td>
 						<td ng-cloak>{{x.payment}} ₪</td>
 						<td ng-cloak>{{x.driver}}</td>
-						<td class="td-contact" id="td" onclick="openTd()" ng-cloak><img id="downarrow" src="arrowdown.png"></td>
+						<td ng-cloak><img id="downarrow" src="arrowdown.png"/></td>
 
 					</tr>
 				</table>
@@ -140,47 +183,6 @@
 			</footer>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-		<script>
-			var app = angular.module("trempApp", []);
-
-			app.controller("trempController", function($scope, $http) {
-				$http.get("trempInfo.json").success(function(res) {
-
-					$scope.tremps = res;
-				}).error(function(data, status, headers, config) {
-					alert("שגיאה");
-				});
-
-				$scope.checkNoTremps = function() {
-					var results = document.getElementById("results");
-					var results2 = document.getElementById("results2");
-
-					
-					var length2 = document.getElementById("length2");
-
-					if (length2.innerText === "0") {
-						results.innerText = "לצערנו, לא נמצאו טרמפים";
-						results.style.display = "block";
-						results2.style.display = "none";
-						
-						} else if (length2.innerText > 0) {
-						results.style.display = "none";
-						results2.style.display = "block";
-					
-						
-					}
-				};
-			});
-
-			app.directive('places', function() {
-				return {
-					restrict : 'E',
-					templateUrl : 'places.html'
-				};
-			});
-
-
-
-		</script>
+		<script src="myscript.js"></script>
 	</body>
 </html>
