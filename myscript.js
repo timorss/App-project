@@ -10,13 +10,16 @@ app.controller("trempController", function($scope, $http) {
 
 	$scope.openTd = function(z) {
 		var allTdAreClosed = document.getElementsByClassName("repeat");
+		var tdIsOpend = document.getElementById(z);
 
 		for ( i = 0; i < allTdAreClosed.length; i++) {
 			allTdAreClosed[i].style.height = "1.5em";
+			allTdAreClosed[i].style.verticalAlign = "middle";
 
 		};
-		var tdIsOpend = document.getElementById(z);
 		tdIsOpend.style.height = "10em";
+		tdIsOpend.style.verticalAlign = "top";
+
 	};
 
 	$scope.checkNoTremps = function() {

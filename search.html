@@ -108,52 +108,53 @@
 				</div>
 				<!-----------------------ניסוי      טבלה     בצורה      שונה----------------------
 				<div id="big-div-table">
-					<div id="head">
-						<div>
-							מוצא:
-						</div>
-						<div>
-							יעד:
-						</div>
-						<div>
-							תאריך:
-						</div>
-						<div>
-							שעה:
-						</div>
-						<div>
-							השתתפות:
-						</div>
+				<div id="head">
+				<div>
+				מוצא:
+				</div>
+				<div>
+				יעד:
+				</div>
+				<div>
+				תאריך:
+				</div>
+				<div>
+				שעה:
+				</div>
+				<div>
+				השתתפות:
+				</div>
 
-					</div>
-					<div id="divtremp" ng-repeat="x in filtered = (tremps | filter: query :true)">
+				</div>
+				<div id="divtremp" ng-repeat="x in filtered = (tremps | filter: query :true)">
 
-						<div ng-cloak>
-							{{x.src}}
-						</div>
-						<div ng-cloak>
-							{{x.dest}}
-						</div>
-						<div ng-cloak>
-							{{x.date}}
-						</div>
-						<div ng-cloak>
-							{{x.time}}
-						</div>
-						<div ng-cloak>
-							{{x.payment}} ₪
-						</div>
+				<div ng-cloak>
+				{{x.src}}
+				</div>
+				<div ng-cloak>
+				{{x.dest}}
+				</div>
+				<div ng-cloak>
+				{{x.date}}
+				</div>
+				<div ng-cloak>
+				{{x.time}}
+				</div>
+				<div ng-cloak>
+				{{x.payment}} ₪
+				</div>
 
-						<div class="td-contact" id="td" onclick="openTddiv()" ng-cloak><img id="downarrow" src="arrowdown.png">
-						</div>
-						<div id="open" style="display: none" ng-cloak>
-							{{x.driver}}
-						</div>
-					</div>
+				<div class="td-contact" id="td" onclick="openTddiv()" ng-cloak><img id="downarrow" src="arrowdown.png">
+				</div>
+				<div id="open" style="display: none" ng-cloak>
+				{{x.driver}}
+				</div>
+				</div>
 
 				</div>
 				<!----------------------------------------------------------------------------------------->
 				<table id="table" >
+
 					<tr>
 						<th>מוצא:</th>
 						<th>יעד:</th>
@@ -167,13 +168,13 @@
 
 						<td ng-cloak>{{x.src}}</td>
 						<td ng-cloak>{{x.dest}}</td>
-						<td ng-cloak>{{x.date}}</td>
+						<td id="tdDate" ng-cloak>{{x.date}}</td>
 						<td ng-cloak>{{x.time}}</td>
 						<td ng-cloak>{{x.payment}} ₪</td>
 						<td ng-cloak>{{x.driver}}</td>
 						<td ng-cloak><img id="downarrow" src="arrowdown.png"/></td>
-
 					</tr>
+
 				</table>
 
 			</div>

@@ -1,42 +1,42 @@
 body {
-background-color: #b1b6ff;
-direction: rtl;
-text-align: center;
-font-family: Arial;
+	background-color: #b1b6ff;
+	direction: rtl;
+	text-align: center;
+	font-family: Arial;
 }
 * {
 
 	padding: 0px;
 	margin: 0px;
-	}
-	#container {
+}
+#container {
 	width: 100%;
 	height: 100%;
 	position: relative;
-	}
+}
 
-	#rideme {
+#rideme {
 	margin-top: 1.5em;
 	margin-bottom: 0em;
 	width: 30%;
 	border-bottom: 0.3em solid #b1b6ff;
-	}
+}
 
-	#rideme:hover {
+#rideme:hover {
 	border-bottom: 0.3em solid #bbff84;
-	}
-	ul {
+}
+ul {
 
 	margin: 0 auto;
-	}
-	.car {
+}
+.car {
 	display: none;
 	position: absolute;
 	left: 42%;
 	bottom: 120%;
 	width: 1em;
-	}
-	li {
+}
+li {
 	position: relative;
 	display: inline-block;
 	font-size: 2.5em;
@@ -50,27 +50,27 @@ font-family: Arial;
 	-webkit-border-radius: 0.5em;
 	-webkit-box-shadow: rgb(110,110,110) 10px 10px 10px;
 	-webkit-transition: width 1s, background-color 1s;
-	}
-	li:hover {
+}
+li:hover {
 
 	width: 9em;
 	background-color: #1ec7e6;
-	}
-	li a {
+}
+li a {
 	display: block;
 	text-decoration: none;
 	color: black;
-	}
+}
 
-	li a:hover, footer a:hover {
+li a:hover, footer a:hover {
 	color: white;
-	}
-	li:hover .car {
+}
+li:hover .car {
 	display: block;
-	}
+}
 
-	/*index----------------------------------------------------------------------------------*/
-	h1 {
+/*index----------------------------------------------------------------------------------*/
+h1 {
 	margin: 0 auto;
 	margin-top: 0.3em;
 	font-size: 3em;
@@ -82,15 +82,15 @@ font-family: Arial;
 	font-size: 3em;
 	font-weight: bold;
 	-webkit-border-radius: 0.5em;
-	}
-	#car-share {
+}
+#car-share {
 	width: 30%;
 	margin-bottom: 1em;
 	margin-bottom: 1.5em;
-	}
+}
 
-	/*search and advertising form----------------------------------------------------------------------------------*/
-	.search-adv-form {
+/*search and advertising form----------------------------------------------------------------------------------*/
+.search-adv-form {
 
 	position: relative;
 	display: inline-block;
@@ -103,60 +103,51 @@ font-family: Arial;
 	background-color: #ccc;
 	width: 50%;
 	-webkit-box-shadow: rgb(110,110,110) 10px 10px 10px;
-	}
-	.search-adv-form img {
+}
+.search-adv-form img {
 	display: block;
 	position: absolute;
 	top: 10%;
 	left: 5%;
 	width: 30%;
-	}
+}
 
-	/*----------------------------------- ניסוי      טבלה     בצורה      שונה  ------------------------------------
-	#big-div-table{
-	margin:0 auto;
-	margin-top: 0.1em;
-	margin-bottom: 1.5em;
-	width: 80%;
-	font-size: 2em;
-	
-	}
-	#big-div-table #head{
-	background-color: #CC510A;
-	border-bottom: 0.1em solid black;
-	}
-	#big-div-table #head div{
-	font-weight:bold;
-	overflow:hidden;
-	display:inline-block;
-	width:14%;
-	}
+/*----------------------------------- ניסוי      טבלה     בצורה      שונה  ------------------------------------
+ #big-div-table{
+ margin:0 auto;
+ margin-top: 0.1em;
+ margin-bottom: 1.5em;
+ width: 80%;
+ font-size: 2em;
 
-	#divtremp div{
-	display:inline-block;
-	overflow:hidden;
-	
-	border:1px solid green;
-	width:14%;	
-	}
-	
-	#divtremp{
-	background-color: #CC870A;
-	line-height: 1.5em;
-		border-bottom: 0.1em solid #b1b6ff;
-	}
-	/*-----------------------------------------------------------------------*/
-	table#table {
+ }
+ #big-div-table #head{
+ background-color: #CC510A;
+ border-bottom: 0.1em solid black;
+ }
+ #big-div-table #head div{
+ font-weight:bold;
+ overflow:hidden;
+ display:inline-block;
+ width:14%;
+ }
 
-	margin-top: 0.1em;
-	margin-bottom: 1.5em;
-	
-	font-size: 2em;
-	border: none;
-	border-collapse: collapse;
-	}
+ #divtremp div{
+ display:inline-block;
+ overflow:hidden;
 
-	#results , #results2{
+ border:1px solid green;
+ width:14%;
+ }
+
+ #divtremp{
+ background-color: #CC870A;
+ line-height: 1.5em;
+ border-bottom: 0.1em solid #b1b6ff;
+ }
+ /*-----------------------------------------------------------------------*/
+
+#results, #results2 {
 	color: white;
 	margin: 0 auto;
 	margin-bottom: 0.1em;
@@ -164,49 +155,73 @@ font-family: Arial;
 	background-color: #C48251;
 	font-size: 3em;
 	font-weight: bold;
-	}
+}
 
-	table#table th {
+/*-----------------טבלה----------------*/
+table#table {
+	margin-top: 0.1em;
+	margin-bottom: 1.5em;
+	font-size: 2em;
+	border: none;
+	border-collapse: collapse;
+}
 
+table#table th {
 	background-color: #CC510A;
 	border-bottom: 0.1em solid black;
-	}
+}
 
-	table#table tr {
+table#table tr {
+	position:relative;
 	background-color: #CC870A;
 	line-height: 1.5em;
-	}
-	table#table td {
 	border-bottom: 0.1em solid #b1b6ff;
-	}
-	table#table tr:hover {
+}
+
+.repeat1 {    /* class lo mugdar*/
+	height: 1.5em;
+	border: 1px solid green;
+	vertical-align: top;
+}
+
+table#table tr:hover {
 	background-color: #CC5153;
-	}
-	form#instant-message:hover, form.search-adv-form:hover, div#about:hover {
+}
+#tdDate {
+	font-size: 0.7em;
+}
+/*-------------------------------------*/
+
+form#instant-message:hover, form.search-adv-form:hover, div#about:hover {
 	background: #1EC7E6;
-	}
-	.search-adv-form div label {
+}
+
+.search-adv-form div label {
 	width: 4em;
-	}
-	div label {
+}
+
+div label {
 	float: right;
 	text-align: left;
 	clear: right;
 	margin-left: 0.8em;
-	}
-	div span {
+}
+
+div span {
 	font-size: 0.8em;
-	}
-	select, input {
+}
 
+select, input {
 	text-align: right;
-	}
-	#button {
-	margin-right: 4.5em;
-	}
-	/*contact form----------------------------------------------------------------------------------*/
+}
 
-	form#instant-message {
+#button {
+	margin-right: 4.5em;
+}
+
+/*contact form----------------------------------------------------------------------------------*/
+
+form#instant-message {
 	position: relative;
 	display: inline-block;
 	margin-top: 1em;
@@ -219,26 +234,29 @@ font-family: Arial;
 	width: 50%;
 	text-align: right;
 	-webkit-box-shadow: rgb(110,110,110) 10px 10px 10px;
-	}
+}
 
-	form#instant-message div label {
+form#instant-message div label {
 	width: 8em;
-	}
-	#third_label {
+}
+
+#third_label {
 	margin-top: 0.5em;
-	}
-	#mail {
+}
+
+#mail {
 	float: left;
 	font-size: 0.8em;
 	font-weight: bold;
 	margin-left: 0.5em;
 	color: #808080;
-	}
-	#send-button {
-	margin-right: 8.5em;
-	}
+}
 
-	footer {
+#send-button {
+	margin-right: 8.5em;
+}
+
+footer {
 	width: 100%;
 	height: 1em;
 	border-top: 0.1em solid gray;
@@ -247,13 +265,15 @@ font-family: Arial;
 	background-color: #ffcd7f;
 	color: black;
 	font-size: 1.5em;
-	}
-	footer a {
-	color: black;
-	}
-	/*about----------------------------------------------------------------------------------*/
-	div#about {
+}
 
+footer a {
+	color: black;
+}
+
+/*about----------------------------------------------------------------------------------*/
+
+div#about {
 	width: 60%;
 	background-color: #ccc;
 	display: inline-block;
@@ -262,10 +282,9 @@ font-family: Arial;
 	font-family: Arial;
 	line-height: 1.5em;
 	-webkit-box-shadow: rgb(110,110,110) 10px 10px 10px;
-	}
-	div#about h3 {
-	text-decoration: underline;
-	}
-	tr td:focus
-	height:5em;
 }
+
+div#about h3 {
+	text-decoration: underline;
+}
+
