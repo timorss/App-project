@@ -8,6 +8,8 @@ app.controller("trempController", function($scope, $http) {
 		alert("שגיאה");
 	});
 
+	
+/* טבלה לא בשימוש
 	$scope.openTd = function(z) {
 		var allTdAreClosed = document.getElementsByClassName("repeat");
 		var tdIsOpend = document.getElementById(z);
@@ -19,6 +21,34 @@ app.controller("trempController", function($scope, $http) {
 		};
 		tdIsOpend.style.height = "10em";
 		tdIsOpend.style.verticalAlign = "top";
+
+	};*/
+
+
+	$scope.openTddiv = function(m, n) {
+		var divTdClass = document.getElementsByClassName("table-div-raw");
+		var divTdIsOpen = document.getElementById(m);
+		var insideDiv = document.getElementById(n);
+		var AllInsideDiv = document.getElementsByClassName("AllInsideDiv");
+
+		for ( i = 0; i < divTdClass.length; i++) {
+
+			divTdClass[i].style.height = "1.9em";
+			AllInsideDiv[i].style.display = "none";
+			divTdClass[i].style.fontWeight = "normal";
+			divTdClass[i].style.background = "#CC870A";
+		};
+
+		divTdIsOpen.style.height = "8em";
+		
+		divTdIsOpen.style.background = "#CC5153";
+		divTdIsOpen.style.fontWeight = "bold";
+		
+	
+
+		insideDiv.style.display = "block";
+		insideDiv.style.width = "80%";
+		insideDiv.style.height = "5em";
 
 	};
 
@@ -47,11 +77,3 @@ app.directive('places', function() {
 	};
 });
 
-/*
- function openTddiv() {
- var divtremp = document.getElementById("divtremp");
- var open = document.getElementById("open");
- divtremp.style.height = "8em";
- open.style.display = "block";
- }
- */

@@ -106,53 +106,62 @@
 				<div id="results2" ng-cloak>
 					<span id="length2">{{filtered.length}}</span> טרמפים במאגר
 				</div>
-				<!-----------------------ניסוי      טבלה     בצורה      שונה----------------------
+
 				<div id="big-div-table">
-				<div id="head">
-				<div>
-				מוצא:
-				</div>
-				<div>
-				יעד:
-				</div>
-				<div>
-				תאריך:
-				</div>
-				<div>
-				שעה:
-				</div>
-				<div>
-				השתתפות:
-				</div>
+					<div id="head">
+						<div>
+							מוצא:
+						</div>
+						<div>
+							יעד:
+						</div>
+						<div>
+							תאריך:
+						</div>
+						<div>
+							שעה:
+						</div>
+						<div>
+							₪:
+						</div>
+						<div ></div>
+					</div>
+					<div id={{x.id}} class="table-div-raw" ng-repeat="x in filtered = (tremps | filter: query :true)">
+
+						<div ng-cloak>
+							{{x.src}}
+						</div>
+						<div ng-cloak>
+							{{x.dest}}
+						</div>
+						<div ng-cloak>
+							{{x.date}}
+						</div>
+						<div ng-cloak>
+							{{x.time}}
+						</div>
+						<div ng-cloak>
+							{{x.payment}} ₪
+						</div>
+
+						<div ng-click="openTddiv(x.id,x.id2)" ng-cloak><img id="downarrow" src="arrowdown.png">
+						</div>
+						<div id={{x.id2}} class="AllInsideDiv" style="display: none" ng-cloak>
+							<p>
+								<strong>שם הנהג:</strong> {{x.driver}}
+							</p>
+							<p>
+								<strong>מס' מקומות:</strong> {{x.seats}}
+							</p>
+							<p>
+								<strong>צור קשר:</strong> {{x.number}}
+							</p>
+						</div>
+					</div>
 
 				</div>
-				<div id="divtremp" ng-repeat="x in filtered = (tremps | filter: query :true)">
-
-				<div ng-cloak>
-				{{x.src}}
-				</div>
-				<div ng-cloak>
-				{{x.dest}}
-				</div>
-				<div ng-cloak>
-				{{x.date}}
-				</div>
-				<div ng-cloak>
-				{{x.time}}
-				</div>
-				<div ng-cloak>
-				{{x.payment}} ₪
-				</div>
-
-				<div class="td-contact" id="td" onclick="openTddiv()" ng-cloak><img id="downarrow" src="arrowdown.png">
-				</div>
-				<div id="open" style="display: none" ng-cloak>
-				{{x.driver}}
-				</div>
-				</div>
-
-				</div>
-				<!----------------------------------------------------------------------------------------->
+			
+<!----------------------------- טבלה לא בשימוש------------------------
 				<table id="table" >
 
 					<tr>
@@ -177,6 +186,7 @@
 
 				</table>
 
+<!------------------------------------------------->
 			</div>
 			<footer>
 				<a href="about.html">About RideWith</a>

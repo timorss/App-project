@@ -112,41 +112,6 @@ h1 {
 	width: 30%;
 }
 
-/*----------------------------------- ניסוי      טבלה     בצורה      שונה  ------------------------------------
- #big-div-table{
- margin:0 auto;
- margin-top: 0.1em;
- margin-bottom: 1.5em;
- width: 80%;
- font-size: 2em;
-
- }
- #big-div-table #head{
- background-color: #CC510A;
- border-bottom: 0.1em solid black;
- }
- #big-div-table #head div{
- font-weight:bold;
- overflow:hidden;
- display:inline-block;
- width:14%;
- }
-
- #divtremp div{
- display:inline-block;
- overflow:hidden;
-
- border:1px solid green;
- width:14%;
- }
-
- #divtremp{
- background-color: #CC870A;
- line-height: 1.5em;
- border-bottom: 0.1em solid #b1b6ff;
- }
- /*-----------------------------------------------------------------------*/
-
 #results, #results2 {
 	color: white;
 	margin: 0 auto;
@@ -156,6 +121,54 @@ h1 {
 	font-size: 3em;
 	font-weight: bold;
 }
+
+#big-div-table {
+	margin: 0 auto;
+	
+	margin-top: 0.2em;
+	margin-bottom: 1.5em;
+	width: 80%;
+	font-size: 2em;
+}
+#big-div-table #head {
+	background-color: #CC510A;
+	border-bottom: 0.1em solid black;
+}
+
+#big-div-table #head div {
+	display: inline-table;
+	font-weight: bold;
+	width: 13%;
+	/*border: 1px solid black;*/
+}
+
+.table-div-raw {
+	background-color: #CC870A;
+	line-height: 1.5em;
+	border-bottom: 0.1em solid #b1b6ff;
+}
+
+.table-div-raw div {
+	display: inline-table;
+	/*border: 1px solid green;*/
+	width: 13%;
+}
+
+
+.table-div-raw:hover {
+	background-color: #CC5153;
+}
+
+.AllInsideDiv {
+
+	text-align: right;
+	background-color: #e5661d;
+	border: #bb4400 0.1em solid;
+	margin: 0 auto;
+	margin-top:0.2em;
+}
+
+/*-----------------------------------------------------------------------*/
 
 /*-----------------טבלה----------------*/
 table#table {
@@ -172,13 +185,13 @@ table#table th {
 }
 
 table#table tr {
-	position:relative;
+	position: relative;
 	background-color: #CC870A;
 	line-height: 1.5em;
 	border-bottom: 0.1em solid #b1b6ff;
 }
 
-.repeat1 {    /* class lo mugdar*/
+.repeat1 {/* class lo mugdar*/
 	height: 1.5em;
 	border: 1px solid green;
 	vertical-align: top;
@@ -215,7 +228,7 @@ select, input {
 	text-align: right;
 }
 
-#button {
+#button-adv {
 	margin-right: 4.5em;
 }
 
