@@ -44,7 +44,7 @@ app.controller("trempController", function($scope, $http) {
 		divTdIsOpen.style.fontWeight = "bold";
 
 		insideDiv.style.display = "block";
-		insideDiv.style.fontWeight = "normal"
+		insideDiv.style.fontWeight = "normal";
 		insideDiv.style.width = "80%";
 		insideDiv.style.height = "6em";
 		insideDiv.style.boxShadow = "0.1em 0.3em 1em black";
