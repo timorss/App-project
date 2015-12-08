@@ -210,6 +210,10 @@ form#instant-message:hover, form.search-adv-form:hover, div#about:hover {
 	width: 4em;
 }
 
+.search-adv-form div#date-time span{
+	font-size: 0.7em;
+}
+
 div label {
 	float: right;
 	text-align: left;
