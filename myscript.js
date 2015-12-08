@@ -2,8 +2,11 @@ var app = angular.module("trempApp", []);
 
 app.controller("trempController", function($scope, $http) {
 	$http.get("trempInfo.json").success(function(res) {
-
+		for(var tremp in res){
+			res[tremp].date= new Date(res[tremp].date);
+		}
 		$scope.tremps = res;
+
 	}).error(function(data, status, headers, config) {
 		alert("שגיאה");
 	});
