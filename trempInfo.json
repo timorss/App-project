@@ -8,8 +8,9 @@
 		"seats": 2,
 		"driver": "בני",
 		"number": "052-4132681",
+		"details": "עובר דרך כביש 4",
 		"id": "tremp1",
-		"id2":"tremp01"
+		"id2": "tremp01"
 	}, {
 		"src": "תל אביב",
 		"dest": "באר שבע",
@@ -19,8 +20,9 @@
 		"seats": 3,
 		"driver": "דורון",
 		"number": "052-4019281",
+		"details": "עובר דרך התחנה המרכזית",
 		"id": "tremp2",
-		"id2":"tremp02"
+		"id2": "tremp02"
 	}, {
 		"src": "אופקים",
 		"dest": "תל אביב",
@@ -30,8 +32,9 @@
 		"seats": 1,
 		"driver": "שלומי",
 		"number": "052-4268021",
+		"details": "עובר דרך השלום",
 		"id": "tremp3",
-		"id2":"tremp03"
+		"id2": "tremp03"
 	}, {
 		"src": "אילת",
 		"dest": "באר שבע",
@@ -41,8 +44,9 @@
 		"seats": 4,
 		"driver": "אביה",
 		"number": "052-5486213",
+		"details": "עובר דרך הנשיאים",
 		"id": "tremp4",
-		"id2":"tremp04"
+		"id2": "tremp04"
 	}, {
 		"src": "תל אביב",
 		"dest": "באר שבע",
@@ -52,8 +56,9 @@
 		"seats": 2,
 		"driver": "עדיאל",
 		"number": "052-3161744",
+		"details": "עובר דרך כביש 4",
 		"id": "tremp5",
-		"id2":"tremp05"
+		"id2": "tremp05"
 	}, {
 		"src": "תל אביב",
 		"dest": "אילת",
@@ -63,8 +68,9 @@
 		"seats": 1,
 		"driver": "שיר",
 		"number": "052-6411768",
+		"details": "עובר דרך כביש 6",
 		"id": "tremp6",
-		"id2":"tremp06"
+		"id2": "tremp06"
 	}, {
 		"src": "אופקים",
 		"dest": "באר שבע",
@@ -74,8 +80,9 @@
 		"seats": 2,
 		"driver": "רוני",
 		"number": "052-4213157",
+		"details": "עובר דרך צומת גילת",
 		"id": "tremp7",
-		"id2":"tremp07"
+		"id2": "tremp07"
 	}, {
 		"src": "אופקים",
 		"dest": "אילת",
@@ -85,8 +92,9 @@
 		"seats": 3,
 		"driver": "דני",
 		"number": "052-4461389",
+		"details": "עובר דרך באר שבע",
 		"id": "tremp8",
-		"id2":"tremp08"
+		"id2": "tremp08"
 	}
 ]
 

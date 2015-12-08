@@ -4,7 +4,6 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<link rel="stylesheet" type="text/css" href="media_screen.css">
-		<link rel="stylesheet" type="text/css" href="search-tremps-style.css">
 		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
 		Remove this if you use the .htaccess -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -156,37 +155,40 @@
 							<p>
 								<strong>צור קשר:</strong> {{x.number}}
 							</p>
+							<p>
+								<strong>הערות:</strong> {{x.details}}
+							</p>
 						</div>
 					</div>
 
 				</div>
-			
-<!----------------------------- טבלה לא בשימוש------------------------
+
+				<!----------------------------- טבלה לא בשימוש------------------------
 				<table id="table" >
 
-					<tr>
-						<th>מוצא:</th>
-						<th>יעד:</th>
-						<th>תאריך:</th>
-						<th>שעה:</th>
-						<th>השתתפות:</th>
-						<th>שם:</th>
-						<th></th>
-					</tr>
-					<tr id={{x.id}} ng-click="openTd(x.id)"  class="repeat" ng-repeat="x in filtered = (tremps | filter: query :true)">
+				<tr>
+				<th>מוצא:</th>
+				<th>יעד:</th>
+				<th>תאריך:</th>
+				<th>שעה:</th>
+				<th>השתתפות:</th>
+				<th>שם:</th>
+				<th></th>
+				</tr>
+				<tr id={{x.id}} ng-click="openTd(x.id)"  class="repeat" ng-repeat="x in filtered = (tremps | filter: query :true)">
 
-						<td ng-cloak>{{x.src}}</td>
-						<td ng-cloak>{{x.dest}}</td>
-						<td id="tdDate" ng-cloak>{{x.date}}</td>
-						<td ng-cloak>{{x.time}}</td>
-						<td ng-cloak>{{x.payment}} ₪</td>
-						<td ng-cloak>{{x.driver}}</td>
-						<td ng-cloak><img id="downarrow" src="arrowdown.png"/></td>
-					</tr>
+				<td ng-cloak>{{x.src}}</td>
+				<td ng-cloak>{{x.dest}}</td>
+				<td id="tdDate" ng-cloak>{{x.date}}</td>
+				<td ng-cloak>{{x.time}}</td>
+				<td ng-cloak>{{x.payment}} ₪</td>
+				<td ng-cloak>{{x.driver}}</td>
+				<td ng-cloak><img id="downarrow" src="arrowdown.png"/></td>
+				</tr>
 
 				</table>
 
-<!------------------------------------------------->
+				<!------------------------------------------------->
 			</div>
 			<footer>
 				<a href="about.html">About RideWith</a>

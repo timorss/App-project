@@ -8,22 +8,20 @@ app.controller("trempController", function($scope, $http) {
 		alert("שגיאה");
 	});
 
-	
-/* טבלה לא בשימוש
-	$scope.openTd = function(z) {
-		var allTdAreClosed = document.getElementsByClassName("repeat");
-		var tdIsOpend = document.getElementById(z);
+	/* טבלה לא בשימוש
+	 $scope.openTd = function(z) {
+	 var allTdAreClosed = document.getElementsByClassName("repeat");
+	 var tdIsOpend = document.getElementById(z);
 
-		for ( i = 0; i < allTdAreClosed.length; i++) {
-			allTdAreClosed[i].style.height = "1.5em";
-			allTdAreClosed[i].style.verticalAlign = "middle";
+	 for ( i = 0; i < allTdAreClosed.length; i++) {
+	 allTdAreClosed[i].style.height = "1.5em";
+	 allTdAreClosed[i].style.verticalAlign = "middle";
 
-		};
-		tdIsOpend.style.height = "10em";
-		tdIsOpend.style.verticalAlign = "top";
+	 };
+	 tdIsOpend.style.height = "10em";
+	 tdIsOpend.style.verticalAlign = "top";
 
-	};*/
-
+	 };*/
 
 	$scope.openTddiv = function(m, n) {
 		var divTdClass = document.getElementsByClassName("table-div-raw");
@@ -34,22 +32,22 @@ app.controller("trempController", function($scope, $http) {
 		for ( i = 0; i < divTdClass.length; i++) {
 
 			divTdClass[i].style.height = "1.9em";
-			AllInsideDiv[i].style.display = "none";
 			divTdClass[i].style.fontWeight = "normal";
 			divTdClass[i].style.background = "#CC870A";
+
+			AllInsideDiv[i].style.display = "none";
+
 		};
 
-		divTdIsOpen.style.height = "8em";
-		
+		divTdIsOpen.style.height = "9em";
 		divTdIsOpen.style.background = "#CC5153";
 		divTdIsOpen.style.fontWeight = "bold";
-		
-	
 
 		insideDiv.style.display = "block";
+		insideDiv.style.fontWeight = "normal"
 		insideDiv.style.width = "80%";
-		insideDiv.style.height = "5em";
-
+		insideDiv.style.height = "6em";
+		insideDiv.style.boxShadow = "0.1em 0.3em 1em black";
 	};
 
 	$scope.checkNoTremps = function() {

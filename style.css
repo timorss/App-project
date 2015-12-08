@@ -124,7 +124,6 @@ h1 {
 
 #big-div-table {
 	margin: 0 auto;
-	
 	margin-top: 0.2em;
 	margin-bottom: 1.5em;
 	width: 80%;
@@ -154,7 +153,6 @@ h1 {
 	width: 13%;
 }
 
-
 .table-div-raw:hover {
 	background-color: #CC5153;
 }
@@ -165,13 +163,12 @@ h1 {
 	background-color: #e5661d;
 	border: #bb4400 0.1em solid;
 	margin: 0 auto;
-	margin-top:0.2em;
+	margin-top: 0.2em;
 }
-
-/*-----------------------------------------------------------------------*/
-
-/*-----------------טבלה----------------*/
+/*
 table#table {
+	width: 80%;
+	margin: 0 auto;
 	margin-top: 0.1em;
 	margin-bottom: 1.5em;
 	font-size: 2em;
@@ -191,19 +188,19 @@ table#table tr {
 	border-bottom: 0.1em solid #b1b6ff;
 }
 
-.repeat1 {/* class lo mugdar*/
-	height: 1.5em;
-	border: 1px solid green;
-	vertical-align: top;
-}
+/* .repeat1 {class lo mugdar
+ height: 1.5em;
+ border: 1px solid green;
+ vertical-align: top;
+ }
 
-table#table tr:hover {
-	background-color: #CC5153;
-}
-#tdDate {
-	font-size: 0.7em;
-}
-/*-------------------------------------*/
+ table#table tr:hover {
+ background-color: #CC5153;
+ }
+ #tdDate {
+ font-size: 0.7em;
+ }
+ */
 
 form#instant-message:hover, form.search-adv-form:hover, div#about:hover {
 	background: #1EC7E6;
@@ -230,6 +227,13 @@ select, input {
 
 #button-adv {
 	margin-right: 4.5em;
+}
+#advTextarea {
+	text-align: right;
+	margin-top: 0.5em;
+	margin-right: 2.5em;
+	width: 60%;
+	height: 8em;
 }
 
 /*contact form----------------------------------------------------------------------------------*/
