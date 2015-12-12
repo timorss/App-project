@@ -34,19 +34,27 @@
 	#big-div-table {
 
 		font-size: 1em;
-	
 	}
 
-	/*
-	 table#table {
+	.table-div-raw {
+		height: 5em;
+	}
+	.table-div-raw div {
+		display: inline-table;
+		/*border: 1px solid green;*/
+		width: 13%;
+		white-space: normal;
+		vertical-align: middle;
+	}
 
-	 font-size: 1em;
-	 } */
-	 #downarrow{
-	 width:1.5em;
+	.divTdIsOpen {
+		height: 11.5em;
+	}
 
-	 }
-	
+	#downarrow {
+		width: 1.7em;
+	}
+
 	#results, #results2 {
 
 		width: 50%;
@@ -129,14 +137,30 @@
 		left: 5%;
 		width: 30%;
 	}
-	table#table {
-		font-size: 1.5em;
-	}
+
 	#results, #results2 {
 		width: 40%;
 		font-size: 2em;
 	}
 
+	.table-div-raw {
+		height: 5em;
+	}
+
+	.table-div-raw div {
+
+		white-space: normal;
+		vertical-align: middle;
+	}
+
+	.divTdIsOpen {
+		
+		height: 11.5em;
+	}
+
+	
+	
+	
 	form#instant-message {
 
 		margin-top: 1em;
@@ -172,4 +196,4 @@
 		width: 60%;
 		font-size: 1.6em;
 	}
-}
+

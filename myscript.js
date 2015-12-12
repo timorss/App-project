@@ -32,23 +32,18 @@ app.controller("trempController", function($scope, $http) {
 
 		for ( i = 0; i < divTdClass.length; i++) {
 
-			divTdClass[i].style.height = "1.9em";
-			divTdClass[i].style.fontWeight = "normal";
-			divTdClass[i].style.background = "#CC870A";
+			divTdClass[i].className = "table-div-raw";
 
 			AllInsideDiv[i].style.display = "none";
 
+
 		};
+		divTdIsOpen.className += " divTdIsOpen";
 
-		divTdIsOpen.style.height = "9em";
-		divTdIsOpen.style.background = "#CC5153";
-		divTdIsOpen.style.fontWeight = "bold";
-
-		insideDiv.style.display = "block";
-		insideDiv.style.fontWeight = "normal";
+		setTimeout(function() {
+			insideDiv.style.display = "block";
+		}, 600);
 		insideDiv.style.width = "80%";
-		insideDiv.style.height = "6em";
-		insideDiv.style.boxShadow = "0.1em 0.3em 1em black";
 	};
 
 	$scope.checkNoTremps = function() {
@@ -69,6 +64,9 @@ app.controller("trempController", function($scope, $http) {
 	};
 });
 
+
+
+		
 app.directive('places', function() {
 	return {
 		restrict : 'E',

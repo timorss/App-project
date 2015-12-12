@@ -359,12 +359,12 @@
 							<label>תאריך:</label>
 							<select ng-model="query.month">
 
-								<option value="mm" selected="selected">mm </option><option value="01">01 </option><option value="02">02 </option><option value="03">03 </option><option value="04">04 </option><option value="05">05 </option><option value="06">06 </option><option value="07">07 </option><option value="08">08 </option><option value="09">09 </option><option value="10">10 </option><option value="11">11 </option><option value="12">12 </option>
+								<option selected="selected">חודש </option><option value="01">01 </option><option value="02">02 </option><option value="03">03 </option><option value="04">04 </option><option value="05">05 </option><option value="06">06 </option><option value="07">07 </option><option value="08">08 </option><option value="09">09 </option><option value="10">10 </option><option value="11">11 </option><option value="12">12 </option>
 							</select>
 							<span>/</span>
 							<select ng-model="query.day" >
 
-								<option value="dd" selected="selected">dd</option><option value="01">01 </option><option value="02">02 </option><option value="03">03 </option><option value="04">04 </option><option value="05">05 </option><option value="06">06 </option><option value="07">07 </option><option value="08">08 </option><option value="09">09 </option><option value="10">10 </option><option value="11">11 </option><option value="12">12 </option><option value="13">13 </option><option value="14">14 </option><option value="15">15 </option><option value="16">16 </option><option value="17">17 </option><option value="18">18 </option><option value="19">19 </option><option value="20">20 </option><option value="21">21 </option><option value="22">22 </option><option value="23">23 </option><option value="24">24 </option><option value="25">25 </option><option value="26">26 </option><option value="27">27 </option><option value="28">28 </option><option value="29">29 </option><option value="30">30 </option><option value="31">31 </option>
+								<option selected="selected">יום</option><option value="01">01 </option><option value="02">02 </option><option value="03">03 </option><option value="04">04 </option><option value="05">05 </option><option value="06">06 </option><option value="07">07 </option><option value="08">08 </option><option value="09">09 </option><option value="10">10 </option><option value="11">11 </option><option value="12">12 </option><option value="13">13 </option><option value="14">14 </option><option value="15">15 </option><option value="16">16 </option><option value="17">17 </option><option value="18">18 </option><option value="19">19 </option><option value="20">20 </option><option value="21">21 </option><option value="22">22 </option><option value="23">23 </option><option value="24">24 </option><option value="25">25 </option><option value="26">26 </option><option value="27">27 </option><option value="28">28 </option><option value="29">29 </option><option value="30">30 </option><option value="31">31 </option>
 							</select>
 							</select>
 
@@ -396,22 +396,23 @@
 						</div>
 					</div>
 
+					<!--מיותר כרגע
 					<div>
-						<label>השתתפות:</label>
+					<label>השתתפות:</label>
 
-						<input type="number" min="0" max="120" value="{{x.payment}}" ng-model="query.payment" >
-						₪
+					<input type="number" min="0" max="120" value="{{x.payment}}" ng-model="query.payment" >
+					₪
 
-						<input type="radio" name="gas" ng-value=0 ng-model="query.payment">
-						<span>ללא</span>
+					<input type="radio" name="gas" ng-value=0 ng-model="query.payment">
+					<span>ללא</span>
 					</div>
-
+					-->
 				</form>
 
 				<div id="results" style="display: none" ng-cloak></div>
 
 				<div id="results2" ng-cloak>
-					<span id="length2">{{filtered.length}}</span> טרמפים במאגר
+					<span id="length2" >{{filtered.length}}</span> טרמפים במאגר
 				</div>
 
 				<div id="big-div-table">
@@ -433,7 +434,7 @@
 						</div>
 						<div ></div>
 					</div>
-					<div id={{x.id}} class="table-div-raw" ng-repeat="x in filtered = (tremps | filter: query :true)">
+					<div id={{x.id}} class="table-div-raw" ng-repeat="x in filtered = (tremps | filter: query :true| orderBy: 'minutes' |orderBy: 'hour')">
 
 						<div ng-cloak>
 							{{x.src}}
@@ -448,10 +449,10 @@
 							{{x.hour}}:{{x.minutes}}
 						</div>
 						<div ng-cloak>
-							{{x.payment}} ₪
+							{{x.payment}} <span>₪</span>
 						</div>
 
-						<div ng-click="openTddiv(x.id,x.id2)" ng-cloak><img id="downarrow" src="arrowdown.png">
+						<div ng-click="openTddiv(x.id,x.id2)" class="downarrow-class" ng-cloak><img id="downarrow" src="arrowdown.png">
 						</div>
 						<div id={{x.id2}} class="AllInsideDiv" style="display: none" ng-cloak>
 							<p>
@@ -492,6 +493,7 @@
 				<td ng-cloak>{{x.payment}} ₪</td>
 				<td ng-cloak>{{x.driver}}</td>
 				<td ng-cloak><img id="downarrow" src="arrowdown.png"/></td>
+
 				</tr>
 
 				</table>
