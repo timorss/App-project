@@ -55,7 +55,7 @@
 
 					<div>
 						<label>מוצא:</label>
-						<select id="src" style="width:6em" ng-model="query.src">
+						<select id="src" style="width:6em" ng-model="query.src" ng-click="checkNoTremps()" >
 							<optgroup label="ישובים">
 
 								<option value="אבן יהודה">אבן יהודה</option>
@@ -281,7 +281,7 @@
 
 					<div>
 						<label>יעד:</label>
-						<select style="width:6em" ng-model="query.dest">
+						<select style="width:6em" ng-model="query.dest" ng-click="checkNoTremps()">
 							<optgroup label="ישובים">
 
 								<option value="אבן יהודה">אבן יהודה</option>
