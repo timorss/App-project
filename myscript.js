@@ -48,21 +48,22 @@ app.controller("trempController", function($scope, $http) {
 
 
 
-	$scope.$watch("filtered.length", function(length) {
+	$scope.checkNoTremps = function() {
 		var results = document.getElementById("results");
 		var results2 = document.getElementById("results2");
+		var length2 = document.getElementById("length2");
 
-		if (length === 0) {
+		if (length2.innerText === "0") {
 			results.innerText = "לצערנו, לא נמצאו טרמפים";
 			results.style.display = "block";
 			results2.style.display = "none";
 
-		} else {
+		} else if (length2.innerText > "0") {
 			results.style.display = "none";
 			results2.style.display = "block";
 
 		}
-	});
+	};
 });
 
 
