@@ -47,7 +47,7 @@
 			<form class="search-adv-form"><img src="car2.png">
 				<div>
 					<label>מוצא:</label>
-					<select required style="width:6em" id="src" ng-model="query.src" ng-click="checkNoTremps()">
+					<select required style="width:6em" id="src" ng-model="query.src">
 						<optgroup label="ישובים">
 							<option value="בחר מוצא" selected>בחר מוצא</option>
 							<option value="אבן יהודה">אבן יהודה</option>
@@ -274,7 +274,7 @@
 
 				<div>
 					<label>יעד:</label>
-					<select required style="width:6em"  ng-model="query.dest" ng-click="checkNoTremps()">
+					<select required style="width:6em"  ng-model="query.dest">
 						<optgroup label="ישובים">
 							<option value="בחר יעד" selected>בחר יעד</option>
 							<option value="אבן יהודה">אבן יהודה</option>
