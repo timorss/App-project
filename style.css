@@ -120,7 +120,7 @@ h1 {
 	color: white;
 	margin: 0 auto;
 	margin-bottom: 0.1em;
-	width: 30%;
+	width: 35%;
 	background-color: #C48251;
 	font-size: 3em;
 	font-weight: bold;
@@ -243,7 +243,7 @@ h1 {
  */
 
 form#instant-message:hover, form.search-adv-form:hover, div#about:hover {
-	background: #1EC7E6;
+	
 }
 
 .search-adv-form div label {
@@ -274,9 +274,41 @@ select, input {
 	text-align: right;
 }
 
-#button-adv {
-	margin-right: 4.5em;
+#button-div-adv {
+	margin-right:5em;
 }
+#button-adv-itself {
+
+	border-radius: 1em;
+	background-color: #ffcd7f;
+	font-weight: bold;
+	text-align: center;
+	font-size: 0.8em;
+	padding: 0.5em;
+
+}
+#button-adv-itself:hover{
+		cursor:pointer;
+		background-color: #1EC7E6;
+}
+#button-send-button {
+	margin-right:10.5em;
+}
+#button-send-itself {
+
+	border-radius: 0.5em;
+	background-color: #ffcd7f;
+	font-weight: bold;
+	text-align: center;
+	font-size: 0.8em;
+	padding: 0.1em 0.5em;
+
+}
+#button-send-itself:hover{
+		cursor:pointer;
+		background-color: #1EC7E6;
+}
+
 #advTextarea {
 	text-align: right;
 	margin-top: 0.5em;
@@ -320,6 +352,7 @@ form#instant-message div label {
 
 #send-button {
 	margin-right: 8.5em;
+	color: red;
 }
 
 footer {
@@ -353,4 +386,7 @@ div#about {
 div#about h3 {
 	text-decoration: underline;
 }
+.star {
 
+	color: red;
+}

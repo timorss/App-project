@@ -42,9 +42,11 @@ app.controller("trempController", function($scope, $http) {
 
 		setTimeout(function() {
 			insideDiv.style.display = "block";
-		}, 600);
+		}, 650);
 		insideDiv.style.width = "80%";
 	};
+
+
 
 	$scope.checkNoTremps = function() {
 		var results = document.getElementById("results");

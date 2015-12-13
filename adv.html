@@ -45,11 +45,11 @@
 
 			</nav>
 			<form class="search-adv-form"><img src="car2.png">
-					<div>
-						<label>מוצא:</label>
-						<select id="src" ng-model="query.src" ng-click="checkNoTremps()">
-
-							<option value="בחר ישוב" selected>בחר ישוב</option>
+				<div>
+					<label>מוצא:</label>
+					<select required style="width:6em" id="src" ng-model="query.src" ng-click="checkNoTremps()">
+						<optgroup label="ישובים">
+							<option value="בחר מוצא" selected>בחר מוצא</option>
 							<option value="אבן יהודה">אבן יהודה</option>
 							<option value="אום אל פאחם">אום אל פאחם</option>
 							<option value="אופקים">אופקים</option>
@@ -193,13 +193,90 @@
 							<option value="שפרעם">שפרעם</option>
 							<option value="תל אביב- יפו">תל אביב- יפו</option>
 							<option value="תל מונד">תל מונד</option>
-						</select>
-					</div>
+						</optgroup>
 
-					<div>
-						<label>יעד:</label>
-						<select ng-model="query.dest" ng-click="checkNoTremps()">
-							<option value="בחר ישוב" selected>בחר ישוב</option>
+						<optgroup label="אוניברסטאות">
+							<option> אוניברסיטת בן-גוריון בנגב </option>
+
+							<option> אוניברסיטת בר-אילן </option>
+
+							<option> אוניברסיטת חיפה </option>
+
+							<option> אוניברסיטת תל אביב </option>
+
+							<option> האוניברסיטה העברית בירושלים </option>
+
+							<option> האוניברסיטה הפתוחה </option>
+
+							<option> הטכניון - מכון טכנולוגי לישראל </option>
+
+							<option> מכון ויצמן למדע </option>
+						</optgroup>
+						<optgroup label="מוסדות לא אוניברסיטאיים">
+							<option> אפקה - המכללה האקדמית להנדסה בתל-אביב </option>
+
+							<option> בית ספר גבוה לטכנולוגיה בירושלים </option>
+
+							<option> בצלאל - אקדמיה לעיצוב ואומנות ירושלים </option>
+
+							<option> האקדמיה למוסיקה ולמחול בירושלים </option>
+
+							<option> המכללה האקדמית אשקלון </option>
+
+							<option> המכללה האקדמית הדסה ירושלים </option>
+
+							<option> המכללה האקדמית יהודה ושומרון </option>
+
+							<option> המכללה האקדמית כנרת בעמק הירדן </option>
+
+							<option> המכללה האקדמית להנדסה אורט ע"ש בראודה </option>
+
+							<option> המכללה האקדמית להנדסה בירושלים </option>
+
+							<option> המכללה האקדמית להנדסה סמי שמעון </option>
+
+							<option> המכללה האקדמית למשפטים </option>
+
+							<option> המכללה האקדמית נתניה </option>
+
+							<option> המכללה האקדמית ספיר </option>
+
+							<option> המכללה האקדמית עמק יזרעאל ע"ש מקס שטרן </option>
+
+							<option> המכללה האקדמית של תל-אביב יפו </option>
+
+							<option> המכללה האקדמית תל חי </option>
+
+							<option> המסלול האקדמי של המכללה למינהל </option>
+
+							<option> המרכז האקדמי פרס </option>
+
+							<option> המרכז האקדמי רופין </option>
+
+							<option> המרכז הבינתחומי בהרצליה </option>
+
+							<option> הקריה האקדמית קרית אונו </option>
+
+							<option> מכון טכנולוגי חולון </option>
+
+							<option> מכון לנדר מרכז אקדמי ירושלים </option>
+
+							<option> מכון שכטר למדעי היהדות </option>
+
+							<option> מכללת שערי משפט - המכללה ללימודי משפט </option>
+
+							<option> שנקר - בית ספר גבוה להנדסה ולעיצוב </option>
+						</optgroup>
+
+					</select>
+					<span class="star">*</span>
+				</div>
+
+				<div>
+					<label>יעד:</label>
+					<select required style="width:6em"  ng-model="query.dest" ng-click="checkNoTremps()">
+						<optgroup label="ישובים">
+							<option value="בחר יעד" selected>בחר יעד</option>
 							<option value="אבן יהודה">אבן יהודה</option>
 							<option value="אום אל פאחם">אום אל פאחם</option>
 							<option value="אופקים">אופקים</option>
@@ -343,139 +420,218 @@
 							<option value="שפרעם">שפרעם</option>
 							<option value="תל אביב- יפו">תל אביב- יפו</option>
 							<option value="תל מונד">תל מונד</option>
-						</select>
-					</div>
+						</optgroup>
 
-					<div id="date-time" >
-						<div>
-							<label>תאריך:</label>
-							<select ng-model="query.month">
+						<optgroup label="אוניברסטאות">
+							<option> אוניברסיטת בן-גוריון בנגב </option>
 
-								<option value="mm" selected="selected">חודש </option><option value="01">01 </option><option value="02">02 </option><option value="03">03 </option><option value="04">04 </option><option value="05">05 </option><option value="06">06 </option><option value="07">07 </option><option value="08">08 </option><option value="09">09 </option><option value="10">10 </option><option value="11">11 </option><option value="12">12 </option>
-							</select>
+							<option> אוניברסיטת בר-אילן </option>
+
+							<option> אוניברסיטת חיפה </option>
+
+							<option> אוניברסיטת תל אביב </option>
+
+							<option> האוניברסיטה העברית בירושלים </option>
+
+							<option> האוניברסיטה הפתוחה </option>
+
+							<option> הטכניון - מכון טכנולוגי לישראל </option>
+
+							<option> מכון ויצמן למדע </option>
+						</optgroup>
+						<optgroup label="מוסדות לא אוניברסיטאיים">
+							<option> אפקה - המכללה האקדמית להנדסה בתל-אביב </option>
+
+							<option> בית ספר גבוה לטכנולוגיה בירושלים </option>
+
+							<option> בצלאל - אקדמיה לעיצוב ואומנות ירושלים </option>
+
+							<option> האקדמיה למוסיקה ולמחול בירושלים </option>
+
+							<option> המכללה האקדמית אשקלון </option>
+
+							<option> המכללה האקדמית הדסה ירושלים </option>
+
+							<option> המכללה האקדמית יהודה ושומרון </option>
+
+							<option> המכללה האקדמית כנרת בעמק הירדן </option>
+
+							<option> המכללה האקדמית להנדסה אורט ע"ש בראודה </option>
+
+							<option> המכללה האקדמית להנדסה בירושלים </option>
+
+							<option> המכללה האקדמית להנדסה סמי שמעון </option>
+
+							<option> המכללה האקדמית למשפטים </option>
+
+							<option> המכללה האקדמית נתניה </option>
+
+							<option> המכללה האקדמית ספיר </option>
+
+							<option> המכללה האקדמית עמק יזרעאל ע"ש מקס שטרן </option>
+
+							<option> המכללה האקדמית של תל-אביב יפו </option>
+
+							<option> המכללה האקדמית תל חי </option>
+
+							<option> המסלול האקדמי של המכללה למינהל </option>
+
+							<option> המרכז האקדמי פרס </option>
+
+							<option> המרכז האקדמי רופין </option>
+
+							<option> המרכז הבינתחומי בהרצליה </option>
+
+							<option> הקריה האקדמית קרית אונו </option>
+
+							<option> מכון טכנולוגי חולון </option>
+
+							<option> מכון לנדר מרכז אקדמי ירושלים </option>
+
+							<option> מכון שכטר למדעי היהדות </option>
+
+							<option> מכללת שערי משפט - המכללה ללימודי משפט </option>
+
+							<option> שנקר - בית ספר גבוה להנדסה ולעיצוב </option>
+						</optgroup>
+
+					</select>
+					<span class="star">*</span>
+				</div>
+
+				<div id="date-time" >
+					<div>
+						<label>תאריך:</label>
+						<select required ng-model="query.month">
+
+							<option value="mm" selected="selected">חודש </option><option value="01">01 </option><option value="02">02 </option><option value="03">03 </option><option value="04">04 </option><option value="05">05 </option><option value="06">06 </option><option value="07">07 </option><option value="08">08 </option><option value="09">09 </option><option value="10">10 </option><option value="11">11 </option><option value="12">12 </option>
+							</select required>
 							<span>/</span>
 							<select ng-model="query.day" >
 
 								<option value="dd" selected="selected">יום</option><option value="01">01 </option><option value="02">02 </option><option value="03">03 </option><option value="04">04 </option><option value="05">05 </option><option value="06">06 </option><option value="07">07 </option><option value="08">08 </option><option value="09">09 </option><option value="10">10 </option><option value="11">11 </option><option value="12">12 </option><option value="13">13 </option><option value="14">14 </option><option value="15">15 </option><option value="16">16 </option><option value="17">17 </option><option value="18">18 </option><option value="19">19 </option><option value="20">20 </option><option value="21">21 </option><option value="22">22 </option><option value="23">23 </option><option value="24">24 </option><option value="25">25 </option><option value="26">26 </option><option value="27">27 </option><option value="28">28 </option><option value="29">29 </option><option value="30">30 </option><option value="31">31 </option>
 							</select>
-							</select>
-
-						</div>
-						<div>		
-
-					<div>
-						<label> שעה:</label>
-						<select ng-model="query.minutes">
-							<option value="00">00 </option>
-							<option value="01">01 </option><option value="02">02 </option><option value="03">03 </option><option value="04">04 </option><option value="05">05 </option><option value="06">06 </option><option value="07">07 </option><option value="08">08 </option><option value="09">09 </option><option value="10">10 </option><option value="11">11 </option><option value="12">12 </option>
-							<option value="13">13 </option>
-							<option value="14">14 </option>
-							<option value="15">15 </option>
-							<option value="16">16 </option>
-							<option value="17">17 </option>
-							<option value="18">18 </option>
-							<option value="19">19 </option>
-							<option value="20">20 </option>
-							<option value="21">21 </option>
-							<option value="22">22 </option>
-							<option value="23">23 </option>
-							<option value="24">24 </option>
-							<option value="25">25 </option>
-							<option value="26">26 </option>
-							<option value="27">27 </option>
-							<option value="28">28 </option>
-							<option value="29">29 </option>
-							<option value="30">30 </option>
-							<option value="31">31 </option>
-							<option value="32">32 </option>
-							<option value="33">33 </option>
-							<option value="34">34 </option>
-							<option value="35">35 </option>
-							<option value="36">36 </option>
-							<option value="37">37 </option>
-							<option value="38">38 </option>
-							<option value="39">39 </option>
-							<option value="40">40 </option>
-							<option value="41">41 </option>
-							<option value="42">42 </option>
-							<option value="43">43 </option>
-							<option value="44">44 </option>
-							<option value="45">45 </option>
-							<option value="46">46 </option>
-							<option value="47">47 </option>
-							<option value="48">48 </option>
-							<option value="49">49 </option>
-							<option value="50">50 </option>
-							<option value="51">51 </option>
-							<option value="52">52 </option>
-							<option value="53">53 </option>
-							<option value="54">54 </option>
-							<option value="55">55 </option>
-							<option value="56">56 </option>
-							<option value="57">57 </option>
-							<option value="58">58 </option>
-							<option value="59">59 </option>
-						</select>
-						<span>:</span>
-
-						<select ng-model="query.hour">
-
-							<option value="07">07 </option><option value="08">08 </option><option value="09">09 </option><option value="10">10 </option><option value="11">11 </option><option value="12">12 </option>
-							<option value="13">13 </option>
-							<option value="14">14 </option>
-							<option value="15">15 </option>
-							<option value="16">16 </option>
-							<option value="17">17 </option>
-							<option value="18">18 </option>
-							<option value="19">19 </option>
-							<option value="20">20 </option>
-							<option value="21">21 </option>
-							<option value="22">22 </option>
-							<option value="23">23 </option>
-							<option value="00">00 </option>
-							<option value="01">01 </option><option value="02">02 </option><option value="03">03 </option><option value="04">04 </option><option value="05">05 </option><option value="06">06 </option>
+							<span class="star">*</span>
 						</select>
 
 					</div>
-				</div>
+					<div>
 
-				<div>
-					<label>השתתפות:</label>
+						<div>
+							<label> שעה:</label>
+							<select ng-model="query.minutes">
+								<option value="00">00 </option>
+								<option value="01">01 </option><option value="02">02 </option><option value="03">03 </option><option value="04">04 </option><option value="05">05 </option><option value="06">06 </option><option value="07">07 </option><option value="08">08 </option><option value="09">09 </option><option value="10">10 </option><option value="11">11 </option><option value="12">12 </option>
+								<option value="13">13 </option>
+								<option value="14">14 </option>
+								<option value="15">15 </option>
+								<option value="16">16 </option>
+								<option value="17">17 </option>
+								<option value="18">18 </option>
+								<option value="19">19 </option>
+								<option value="20">20 </option>
+								<option value="21">21 </option>
+								<option value="22">22 </option>
+								<option value="23">23 </option>
+								<option value="24">24 </option>
+								<option value="25">25 </option>
+								<option value="26">26 </option>
+								<option value="27">27 </option>
+								<option value="28">28 </option>
+								<option value="29">29 </option>
+								<option value="30">30 </option>
+								<option value="31">31 </option>
+								<option value="32">32 </option>
+								<option value="33">33 </option>
+								<option value="34">34 </option>
+								<option value="35">35 </option>
+								<option value="36">36 </option>
+								<option value="37">37 </option>
+								<option value="38">38 </option>
+								<option value="39">39 </option>
+								<option value="40">40 </option>
+								<option value="41">41 </option>
+								<option value="42">42 </option>
+								<option value="43">43 </option>
+								<option value="44">44 </option>
+								<option value="45">45 </option>
+								<option value="46">46 </option>
+								<option value="47">47 </option>
+								<option value="48">48 </option>
+								<option value="49">49 </option>
+								<option value="50">50 </option>
+								<option value="51">51 </option>
+								<option value="52">52 </option>
+								<option value="53">53 </option>
+								<option value="54">54 </option>
+								<option value="55">55 </option>
+								<option value="56">56 </option>
+								<option value="57">57 </option>
+								<option value="58">58 </option>
+								<option value="59">59 </option>
+							</select>
+							<span>:</span>
 
-					<input type="number" min="0" max="120">
-					₪
+							<select ng-model="query.hour">
 
-					<input type="radio" name="gas">
-					<span>ללא</span>
-				</div>
-				<div>
-					<label>מקומות:</label>
-					<select>
-						<option>1</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-					</select>
-				</div>
-				<div>
-					<label> שם:</label>
-					<input type="text" size="10">
-				</div>
+								<option value="07">07 </option><option value="08">08 </option><option value="09">09 </option><option value="10">10 </option><option value="11">11 </option><option value="12">12 </option>
+								<option value="13">13 </option>
+								<option value="14">14 </option>
+								<option value="15">15 </option>
+								<option value="16">16 </option>
+								<option value="17">17 </option>
+								<option value="18">18 </option>
+								<option value="19">19 </option>
+								<option value="20">20 </option>
+								<option value="21">21 </option>
+								<option value="22">22 </option>
+								<option value="23">23 </option>
+								<option value="00">00 </option>
+								<option value="01">01 </option><option value="02">02 </option><option value="03">03 </option><option value="04">04 </option><option value="05">05 </option><option value="06">06 </option>
+							</select>
 
-				<div>
-					<label> פלאפון:</label>
-					<input type="text" size="10">
-				</div>
+						</div>
+					</div>
 
-				<div>
-					<label style="text-decoration: underline"> הערות:</label>
-					<br/>
-					<textarea id="advTextarea" placeholder="תחנות סופיות או תחנות שאתם עוברים בדרך וכו' וכו'"></textarea>
-				</div>
+					<div>
+						<label>השתתפות:</label>
 
-				<div id="button-adv">
-					<input type="button" value="פרסם">
-				</div>
+						<input type="number" min="0" max="120">
+						₪
+
+						<input type="radio" name="gas">
+						<span>ללא</span>
+					</div>
+					<div>
+						<label>מקומות:</label>
+						<select>
+							<option>1</option>
+							<option selected>2</option>
+							<option>3</option>
+							<option>4</option>
+						</select>
+					</div>
+					<div>
+						<label> שם:</label>
+						<input type="text" size="7" required>
+						<span class="star">*</span>
+					</div>
+
+					<div>
+						<label> פלאפון:</label>
+						<input type="text" size="7" required>
+						<span class="star">*</span>
+					</div>
+
+					<div>
+						<label style="text-decoration: underline"> הערות:</label>
+						<br/>
+						<textarea id="advTextarea" placeholder="תחנות סופיות או תחנות שאתם עוברים בדרך וכו' וכו'"></textarea>
+					</div>
+
+					<div id="button-div-adv">
+						<input type="submit" id="button-adv-itself" value="פרסם טרמפ!">
+					</div>
 
 			</form>
 		</div>
