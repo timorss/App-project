@@ -30,6 +30,12 @@
 		left: 5%;
 		width: 15%;
 	}
+	#button-clear-search {
+	margin-right: 8em;
+	padding: 0.5em;
+	font-weight: bold;
+}
+	
 	#button-div-adv {
 	margin-right:4em;
 }
@@ -223,6 +229,14 @@
 		width: 60%;
 		font-size: 1.6em;
 	}
+		#button-clear-search {
+	font-size: 0.7em;
+	margin-right: 6em;
+	padding: 0.5em;
+	font-weight: bold;
+}
+	
+	
 	#button-div-adv {
 	margin-right:5em;
 }

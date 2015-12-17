@@ -130,7 +130,7 @@ h1 {
 	margin: 0 auto;
 	margin-top: 0.2em;
 	margin-bottom: 1.5em;
-	width: 80%;
+	width: 85%;
 	font-size: 2em;
 }
 #big-div-table #head {
@@ -162,6 +162,8 @@ h1 {
 	display: inline-table;
 	/*border: 1px solid green;*/
 	width: 13%;
+	
+	border:1px solid green;
 	white-space: nowrap;
 	-webkit-transition: color 1.5s;
 	transition: color 1.5s;
@@ -204,6 +206,7 @@ h1 {
 	color: black;
 }
 
+
 /*-----------------------------------------*/
 /*
  table#table {
@@ -243,7 +246,7 @@ h1 {
  */
 
 form#instant-message:hover, form.search-adv-form:hover, div#about:hover {
-	
+
 }
 
 .search-adv-form div label {
@@ -274,8 +277,21 @@ select, input {
 	text-align: right;
 }
 
+#button-clear-search {
+		font-size: 0.5em;
+	margin-right: 12em;
+	border-radius: 1em;
+	background-color: #ffcd7f;
+	padding: 0.5em;
+	font-weight: bold;
+}
+#button-clear-search:hover {
+	cursor: pointer;
+	background-color: #1EC7E6;
+}
+
 #button-div-adv {
-	margin-right:5em;
+	margin-right: 5em;
 }
 #button-adv-itself {
 
@@ -285,15 +301,15 @@ select, input {
 	text-align: center;
 	font-size: 0.8em;
 	padding: 0.5em;
-
 }
-#button-adv-itself:hover{
-		cursor:pointer;
-		background-color: #1EC7E6;
+#button-adv-itself:hover {
+	cursor: pointer;
+	background-color: #1EC7E6;
 }
 #button-send-button {
-	margin-right:10.5em;
+	margin-right: 10.5em;
 }
+
 #button-send-itself {
 
 	border-radius: 0.5em;
@@ -302,11 +318,10 @@ select, input {
 	text-align: center;
 	font-size: 0.8em;
 	padding: 0.1em 0.5em;
-
 }
-#button-send-itself:hover{
-		cursor:pointer;
-		background-color: #1EC7E6;
+#button-send-itself:hover {
+	cursor: pointer;
+	background-color: #1EC7E6;
 }
 
 #advTextarea {
