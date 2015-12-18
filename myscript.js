@@ -1,6 +1,9 @@
 var app = angular.module("trempApp", []);
 
 app.controller("trempController", function($scope, $http) {
+	
+	
+	
 	$http.get("trempInfo.json").success(function(res) {
 
 		$scope.tremps = res;
