@@ -1,9 +1,7 @@
 var app = angular.module("trempApp", []);
 
 app.controller("trempController", function($scope, $http) {
-	
-	
-	
+
 	$http.get("trempInfo.json").success(function(res) {
 
 		$scope.tremps = res;
@@ -11,6 +9,7 @@ app.controller("trempController", function($scope, $http) {
 	}).error(function(data, status, headers, config) {
 		alert("שגיאה");
 	});
+
 
 	/* טבלה לא בשימוש
 	 $scope.openTd = function(z) {
@@ -39,8 +38,8 @@ app.controller("trempController", function($scope, $http) {
 
 			AllInsideDiv[i].style.display = "none";
 
-
 		};
+
 		divTdIsOpen.className += " divTdIsOpen";
 
 		setTimeout(function() {
@@ -50,25 +49,25 @@ app.controller("trempController", function($scope, $http) {
 	};
 
 
-
-	/*  $scope.checkNoTremps = function() {
-		var results = document.getElementById("results");
-		var results2 = document.getElementById("results2");
-		var length2 = document.getElementById("length2");
-
-		if (length2.innerText === "0") {
-			results.innerText = "לצערנו, לא נמצאו טרמפים";
-			results.style.display = "block";
-			results2.style.display = "none";
-
-		} else if (length2.innerText > "0") {
-			results.style.display = "none";
-			results2.style.display = "block";
-
-		}
-	};   */
 	
-		$scope.$watch("filtered.length", function(length) {
+	/*  $scope.checkNoTremps = function() {
+	 var results = document.getElementById("results");
+	 var results2 = document.getElementById("results2");
+	 var length2 = document.getElementById("length2");
+
+	 if (length2.innerText === "0") {
+	 results.innerText = "לצערנו, לא נמצאו טרמפים";
+	 results.style.display = "block";
+	 results2.style.display = "none";
+
+	 } else if (length2.innerText > "0") {
+	 results.style.display = "none";
+	 results2.style.display = "block";
+
+	 }
+	 };   */
+
+	$scope.$watch("filtered.length", function(length) {
 		var results = document.getElementById("results");
 		var results2 = document.getElementById("results2");
 
@@ -76,19 +75,15 @@ app.controller("trempController", function($scope, $http) {
 			results.innerText = "לצערנו, לא נמצאו טרמפים";
 			results.style.display = "block";
 			results2.style.display = "none";
-
 		} else {
 			results.style.display = "none";
 			results2.style.display = "block";
+			}
 
-		}
 	});
-	
+
 });
 
-
-
-		
 app.directive('places', function() {
 	return {
 		restrict : 'E',
