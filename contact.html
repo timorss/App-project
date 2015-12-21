@@ -42,24 +42,32 @@
 					</li>
 				</ul>
 			</nav>
-			<form id="instant-message"><img class="car" src="car3.png">
+
+
+
+			<form id="instant-message" class="formContact" method="post" action="http://127.0.0.1:8024/sendEmail" ><img class="car" src="car3.png">
 
 				<div>
 					<label>שם: </label>
-					<input type="text" placeholder="הקלד כאן את שמך">
+					<input type="text" name="sender" placeholder="הקלד כאן את שמך">
 				</div>
 				<div>
 					<label>אימייל:</label>
-					<input type="email" placeholder="אימייל	">
+					<input type="email" name="email" placeholder="אימייל">
 				</div>
 				<div id="third_label">
 					<label >הערות:</label>
-					<textarea rows="10" cols="30" placeholder="אם יש לכם הערות המלצות שאלות....
+					<textarea name="content" rows="10" cols="30" placeholder="אם יש לכם הערות המלצות שאלות....
 						פה זה המקום! "></textarea>
 				</div>
 
 				<div id="button-send-button">
-					<input type="submit" id="button-send-itself"  value="שלח">
+		
+					
+					<button id="button-send-itself" class="btn" type="submit">
+					שלח
+				</button>
+					
 				</div>
 				<div >
 					<a id="mail" href="mailto:timorss@gmail.com" target="_top">timorss@gmail.com</a>
