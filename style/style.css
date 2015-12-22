@@ -97,7 +97,7 @@ h1 {
 	position: relative;
 	display: inline-block;
 	margin-top: 1em;
-	margin-bottom: 2em;
+	margin-bottom: 1em;
 	padding: 0.2em 0;
 	font-size: 2em;
 	font-weight: bold;
@@ -106,9 +106,10 @@ h1 {
 	width: 50%;
 	-webkit-box-shadow: rgb(110,110,110) 10px 10px 10px;
 }
-.search-adv-form p{
-	font-size:0.5em;margin-right:3em;
-	color:green;
+.search-adv-form p {
+	font-size: 0.5em;
+	margin-right: 3em;
+	color: green;
 }
 .search-adv-form img {
 	display: block;
@@ -126,6 +127,7 @@ h1 {
 	background-color: #C48251;
 	font-size: 3em;
 	font-weight: bold;
+	margin-bottom: 0.9em;
 }
 
 #big-div-table {
@@ -342,7 +344,6 @@ div#instant-message {
 	font-size: 1.5em;
 	text-align: right;
 	-webkit-box-shadow: rgb(110,110,110) 10px 10px 10px;
-	
 }
 
 #mail {
@@ -384,7 +385,7 @@ div#about {
 	font-family: Arial;
 	line-height: 1.5em;
 	-webkit-box-shadow: rgb(110,110,110) 10px 10px 10px;
-		padding: 0.5em 0.5em;
+	padding: 0.5em 0.5em;
 }
 
 div#about h3 {
