@@ -23,6 +23,11 @@
 		text-align: right;
 		width: 80%;
 	}
+	.search-adv-form div{
+	margin-top:0.3em;
+	margin-bottom:0.3em;
+}
+	
 	.search-adv-form img {
 		display: block;
 		position: absolute;
@@ -30,6 +35,7 @@
 		left: 5%;
 		width: 15%;
 	}
+	
 	#button-clear-search {
 	margin-right: 8em;
 	padding: 0.5em;
@@ -169,6 +175,7 @@
 	#results, #results2 {
 		width: 40%;
 		font-size: 2em;
+		
 	}
 		#big-div-table {
 		width: 90%;

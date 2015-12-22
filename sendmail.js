@@ -17,8 +17,8 @@ app.post("/sendEmail", function(request, response) {
 	var transporter = nodemailer.createTransport({
 		service : 'Gmail',
 		auth : {
-			user : 'timorss@gmail.com',
-			pass : 'mkhyef'
+			user : ',
+			pass : ''
 		}
 	});
 
@@ -28,7 +28,7 @@ app.post("/sendEmail", function(request, response) {
 	// setup e-mail data with unicode symbols
 	var mailOptions = {
 		from : request.body.email, // sender address
-		to : 'timorss@gmail.com', // list of receivers
+		to : '', // list of receivers
 		subject : 'Hello ✔', // Subject line
 		text : request.body.content + ". From: " + request.body.sender, // plaintext body
 		//html: '<b>Hello world ✔</b>' // html body

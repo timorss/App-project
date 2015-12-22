@@ -57,7 +57,6 @@ li {
 li:hover {
 
 	width: 9em;
-	background-color: #1ec7e6;
 }
 li a {
 	display: block;
@@ -162,8 +161,6 @@ h1 {
 	display: inline-table;
 	/*border: 1px solid green;*/
 	width: 13%;
-	
-
 	white-space: nowrap;
 	-webkit-transition: color 1.5s;
 	transition: color 1.5s;
@@ -206,7 +203,6 @@ h1 {
 	color: black;
 }
 
-
 /*-----------------------------------------*/
 /*
  table#table {
@@ -245,10 +241,6 @@ h1 {
  }
  */
 
-form#instant-message:hover, form.search-adv-form:hover, div#about:hover {
-
-}
-
 .search-adv-form div label {
 	width: 4em;
 }
@@ -278,7 +270,7 @@ select, input {
 }
 
 #button-clear-search {
-		font-size: 0.5em;
+	font-size: 0.5em;
 	margin-right: 12em;
 	border-radius: 1em;
 	background-color: #ffcd7f;
@@ -334,27 +326,18 @@ select, input {
 
 /*contact form----------------------------------------------------------------------------------*/
 
-form#instant-message {
+div#instant-message {
 	position: relative;
 	display: inline-block;
 	margin-top: 1em;
 	margin-bottom: 1.5em;
-	padding-top: 0.5em;
-	font-size: 2em;
-	font-weight: bold;
 	line-height: 1.5em;
 	background-color: #ccc;
-	width: 50%;
+	width: 80%;
+	font-family: Arial;
 	text-align: right;
 	-webkit-box-shadow: rgb(110,110,110) 10px 10px 10px;
-}
-
-form#instant-message div label {
-	width: 8em;
-}
-
-#third_label {
-	margin-top: 0.5em;
+	font-size: 1.5em;
 }
 
 #mail {
@@ -405,6 +388,6 @@ div#about h3 {
 
 	color: red;
 }
-#Clip-arts{
-	margin-top:1em;
+#Clip-arts {
+	margin-top: 1em;
 }
