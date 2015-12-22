@@ -106,7 +106,10 @@ h1 {
 	width: 50%;
 	-webkit-box-shadow: rgb(110,110,110) 10px 10px 10px;
 }
-
+.search-adv-form p{
+	font-size:0.5em;margin-right:3em;
+	color:green;
+}
 .search-adv-form img {
 	display: block;
 	position: absolute;
@@ -327,17 +330,19 @@ select, input {
 /*contact form----------------------------------------------------------------------------------*/
 
 div#instant-message {
+	padding: 0.5em 0.5em;
 	position: relative;
 	display: inline-block;
-	margin-top: 1em;
+	margin-top: 1.5em;
 	margin-bottom: 1.5em;
 	line-height: 1.5em;
 	background-color: #ccc;
-	width: 80%;
+	width: 60%;
 	font-family: Arial;
+	font-size: 1.5em;
 	text-align: right;
 	-webkit-box-shadow: rgb(110,110,110) 10px 10px 10px;
-	font-size: 1.5em;
+	
 }
 
 #mail {
@@ -379,6 +384,7 @@ div#about {
 	font-family: Arial;
 	line-height: 1.5em;
 	-webkit-box-shadow: rgb(110,110,110) 10px 10px 10px;
+		padding: 0.5em 0.5em;
 }
 
 div#about h3 {
