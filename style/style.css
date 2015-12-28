@@ -18,12 +18,12 @@ body {
 #rideme {
 	margin-top: 1.5em;
 	margin-bottom: 0em;
-	width: 30%;
+	width: 20%;
 	border-bottom: 0.3em solid #b1b6ff;
 }
 
 #rideme:hover {
-	border-bottom: 0.3em solid #bbff84;
+	border-bottom: 0.3em solid #fbca30;
 }
 ul {
 
