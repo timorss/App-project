@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="trempApp" lang="en">
+<html ng-app="searchApp" lang="en">
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="style/style.css">
@@ -50,15 +50,15 @@
 
 			<!--controller----------------------------------------------------------------------------- -->
 
-			<div ng-controller="trempController" ng-cloak>
+			<div ng-controller="searchController" ng-cloak>
 
 				<form class="search-adv-form"><img src="img/car4.png" >
-				<p>
+					<p>
 						<strong>סטודנטים, </strong>ניתן לחפש במוצא וביעד גם לפי מוסדות לימוד!
 					</p>
 					<div>
 						<label>מוצא:</label>
-						<select id="src" style="width:6em" ng-model="query.src">
+					<select id="src" style="width:6em" ng-model="query.src">
 							<option disabled selected> בחר מוצא </option>
 							<optgroup label="ישובים">
 								<option value="אבן יהודה">אבן יהודה</option>
@@ -556,7 +556,7 @@
 					<span id="length2" >{{filtered.length}}</span> טרמפים במאגר
 				</div>
 
-				<div id="big-div-table" ng-show="query">
+				<div id="big-div-table" >
 					<div id="head">
 						<div>
 							מוצא:
@@ -593,9 +593,9 @@
 							{{x.payment}} <span>₪</span>
 						</div>
 
-						<div ng-click="openTddiv(x.id,x.id2)" class="downarrow-class" ng-cloak><img id="downarrow" src="arrowdown.png">
+						<div ng-click="openTddiv(x.id,x.id2)" class="downarrow-class" ng-cloak><img id="downarrow" ng-src="arrowdown.png">
 						</div>
-						<div id={{x.id2}} class="AllInsideDiv" style="display: none" ng-cloak>
+						<div  id={{x.id2}} class="AllInsideDiv" style="display: none" ng-cloak>
 							<p>
 								<strong>שם הנהג:</strong> {{x.driver}}
 							</p>
@@ -606,7 +606,7 @@
 								<strong>צור קשר:</strong> {{x.number}}
 							</p>
 							<p>
-								<strong>הערות:</strong> <span>{{x.details}}</span>
+								<strong>הערות:</strong><span>{{x.details}}</span>
 							</p>
 						</div>
 					</div>
@@ -641,11 +641,12 @@
 
 				<!------------------------------------------------->
 			</div>
-						<footer>
-							<a href="about.html">About Trempi</a>
+			<footer>
+				<a href="about.html">About Trempi</a>
 
-						</footer>
+			</footer>
 		</div>
+		<script src="/node_modules/angular/angular.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 		<script src="angular-route.min.js"></script>
 		<script src="myscript.js"></script>

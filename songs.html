@@ -1,0 +1,65 @@
+<html ng-app="songsApp">
+	<head>
+		<meta charset="UTF-8">
+		<title>שירים שאוהבים</title>
+		<style>
+			body {
+				direction: rtl;
+				text-align: right;
+			}
+			li {
+				background-color: lightgreen;
+				margin: 10px;
+				padding: 3px;
+				border: solid 2px green;
+			}
+		</style>
+	</head>
+	<body ng-controller="songsController">
+
+		<ul>
+			<li ng-repeat="s in songs">
+				<p>
+					ביצוע: {{ s.singer }}
+				</p>
+				<p>
+					שם השיר: {{ s.song }}
+				</p>
+			</li>
+		</ul>
+
+		<h1>הוספת שיר חדש:</h1>
+		<input type="text" ng-model="singer" placeholder="ביצוע">
+		<input type="text" ng-model="song" placeholder="שיר">
+		<button ng-click="createSong()">
+			אישור
+		</button>
+
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.min.js"></script>
+		<script>
+			var app = angular.module('songsApp', []);
+
+			app.controller('songsController', function($scope, $http) {
+
+				$scope.getSongs = function() {
+					$http.get('http://localhost:3000/songs').success(function(data) {
+						$scope.songs = data;
+					});
+				};
+
+				$scope.createSong = function() {
+					var newSong = {
+						singer : $scope.singer,
+						song : $scope.song
+					};
+					$http.post('http://localhost:3000/songs', newSong).success(function() {
+						console.log("נוצר בהצלחה!");
+						$scope.getSongs();
+					});
+				};
+				
+				$scope.getSongs();
+			});
+		</script>
+	</body>
+</html>

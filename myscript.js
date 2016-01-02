@@ -1,15 +1,47 @@
-var app = angular.module("trempApp", []);
+var searchApp = angular.module("searchApp", []);
+var advApp = angular.module("advApp", []);
 
-app.controller("trempController", function($scope, $http) {
+/* adv controller*/
+advApp.controller("advController", function($scope, $http) {
 
-	$http.get("trempInfo.json").success(function(res) {
+	$scope.createTremp = function() {
 
+		var ma = document.getElementById("button-adv-itself");
+		ma.style.border = "3px solid green";
+		var newTremp = {
+			src : $scope.query.src,
+			dest : $scope.query.dest,
+			day : $scope.query.day,
+			month : $scope.query.month,
+			hour : $scope.query.hour,
+			minutes : $scope.query.minutes,
+			payment : $scope.query.payment,
+			seats : $scope.query.seats,
+			driver : $scope.query.driver,
+			number : $scope.query.number,
+			details : $scope.query.details,
+			id: this.id,
+			id2: Math.floor((Math.random()*100000000000000015)+1)
+		};
+
+		$http.post('http://localhost:3000/tremps', newTremp).success(function() {
+			alert("נוצר בהצלחה!");
+		}).error(function(data, status, headers, config) {
+			alert("שגיאה");
+		});
+
+	};
+});
+
+/* search controller*/
+searchApp.controller("searchController", function($scope, $http) {
+
+	$http.get("http://localhost:3000/tremps").success(function(res) {
 		$scope.tremps = res;
 
 	}).error(function(data, status, headers, config) {
 		alert("שגיאה");
 	});
-
 
 	/* טבלה לא בשימוש
 	 $scope.openTd = function(z) {
@@ -48,8 +80,6 @@ app.controller("trempController", function($scope, $http) {
 		insideDiv.style.width = "80%";
 	};
 
-
-	
 	/*  $scope.checkNoTremps = function() {
 	 var results = document.getElementById("results");
 	 var results2 = document.getElementById("results2");
@@ -78,16 +108,16 @@ app.controller("trempController", function($scope, $http) {
 		} else {
 			results.style.display = "none";
 			results2.style.display = "block";
-			}
+		}
 
 	});
 
 });
-
-app.directive('places', function() {
-	return {
-		restrict : 'E',
-		templateUrl : 'places.html'
-	};
-});
+/* לא בשימוש
+ app.directive('places', function() {
+ return {
+ restrict : 'E',
+ templateUrl : 'places.html'
+ };
+ });   */
 
