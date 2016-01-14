@@ -2,12 +2,13 @@ var searchApp = angular.module("searchApp", []);
 var advApp = angular.module("advApp", []);
 
 /* adv controller*/
-advApp.controller("advController", function($scope, $http) {
+advApp.controller("advController", function($scope, $http, $rootScope) {
 
 	$scope.createTremp = function() {
 
 		var ma = document.getElementById("button-adv-itself");
 		ma.style.border = "3px solid green";
+
 		var newTremp = {
 			src : $scope.query.src,
 			dest : $scope.query.dest,
@@ -20,12 +21,13 @@ advApp.controller("advController", function($scope, $http) {
 			driver : $scope.query.driver,
 			number : $scope.query.number,
 			details : $scope.query.details,
-			id: this.id,
-			id2: Math.floor((Math.random()*100000000000000015)+1)
+			date : $scope.query.date,
+			id : this.id,
+			id2 : Math.floor((Math.random() * 100000000000000015) + 1)
 		};
 
 		$http.post('http://localhost:3000/tremps', newTremp).success(function() {
-			alert("נוצר בהצלחה!");
+						alert("נוצר בהצלחה!");
 		}).error(function(data, status, headers, config) {
 			alert("שגיאה");
 		});
@@ -34,7 +36,7 @@ advApp.controller("advController", function($scope, $http) {
 });
 
 /* search controller*/
-searchApp.controller("searchController", function($scope, $http) {
+searchApp.controller("searchController", function($scope, $http, $rootScope) {
 
 	$http.get("http://localhost:3000/tremps").success(function(res) {
 		$scope.tremps = res;
@@ -113,6 +115,7 @@ searchApp.controller("searchController", function($scope, $http) {
 	});
 
 });
+
 /* לא בשימוש
  app.directive('places', function() {
  return {

@@ -25,6 +25,7 @@
 				<p>
 					שם השיר: {{ s.song }}
 				</p>
+				<button ng-click="deletesSong">delete</button>
 			</li>
 		</ul>
 
@@ -57,7 +58,13 @@
 						$scope.getSongs();
 					});
 				};
-				
+
+				$scope.deletesSong = function(s) {
+					$http.delete('http://localhost:3000/songs', s).success(function() {
+						$scope.songs.splice($scope.songs.indexOf(s), 1);
+					});
+				};
+
 				$scope.getSongs();
 			});
 		</script>

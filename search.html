@@ -25,6 +25,11 @@
 				display: none !important;
 			}
 		</style>
+
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+		<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
 	</head>
 
 	<body>
@@ -58,8 +63,8 @@
 					</p>
 					<div>
 						<label>מוצא:</label>
-					<select id="src" style="width:6em" ng-model="query.src">
-							<option disabled selected> בחר מוצא </option>
+						<select id="src" style="width:6em" ng-model="query.src">
+							<option value="" disabled selected> בחר מוצא </option>
 							<optgroup label="ישובים">
 								<option value="אבן יהודה">אבן יהודה</option>
 								<option value="אופקים">אופקים</option>
@@ -278,7 +283,7 @@
 					<div>
 						<label>יעד:</label>
 						<select style="width:6em" ng-model="query.dest">
-							<option disabled selected> בחר יעד </option>
+							<option value="" disabled selected> בחר יעד </option>
 							<optgroup label="ישובים">
 								<option value="אבן יהודה">אבן יהודה</option>
 								<option value="אופקים">אופקים</option>
@@ -498,12 +503,12 @@
 						<div>
 							<label>תאריך:</label>
 							<select ng-model="query.month">
-								<option disabled selected> חודש </option>
+								<option value="" disabled selected> חודש </option>
 								<option value="01">01 </option><option value="02">02 </option><option value="03">03 </option><option value="04">04 </option><option value="05">05 </option><option value="06">06 </option><option value="07">07 </option><option value="08">08 </option><option value="09">09 </option><option value="10">10 </option><option value="11">11 </option><option value="12">12 </option>
 							</select>
 							<span>/</span>
 							<select ng-model="query.day" >
-								<option disabled selected> יום </option>
+								<option value="" disabled selected> יום </option>
 								<option value="01">01 </option><option value="02">02 </option><option value="03">03 </option><option value="04">04 </option><option value="05">05 </option><option value="06">06 </option><option value="07">07 </option><option value="08">08 </option><option value="09">09 </option><option value="10">10 </option><option value="11">11 </option><option value="12">12 </option><option value="13">13 </option><option value="14">14 </option><option value="15">15 </option><option value="16">16 </option><option value="17">17 </option><option value="18">18 </option><option value="19">19 </option><option value="20">20 </option><option value="21">21 </option><option value="22">22 </option><option value="23">23 </option><option value="24">24 </option><option value="25">25 </option><option value="26">26 </option><option value="27">27 </option><option value="28">28 </option><option value="29">29 </option><option value="30">30 </option><option value="31">31 </option>
 							</select>
 							</select>
@@ -515,22 +520,23 @@
 							<span>בסביבות:</span>
 
 							<select ng-model="query.hour">
-								<option disabled selected> שעה </option>
-								<option value="07">7:00 </option><option value="08">8:00 </option><option value="09">9:00 </option><option value="10">10:00 </option><option value="11">11:00 </option><option value="12">12:00 </option>
-								<option value="13">13:00 </option>
-								<option value="14">14:00 </option>
-								<option value="15">15:00 </option>
-								<option value="16">16:00 </option>
-								<option value="17">17:00 </option>
-								<option value="18">18:00 </option>
-								<option value="19">19:00 </option>
-								<option value="20">20:00 </option>
-								<option value="21">21:00 </option>
-								<option value="22">22:00 </option>
-								<option value="23">23:00 </option>
-								<option value="00">00:00 </option>
-								<option value="01">1:00 </option><option value="02">2:00 </option><option value="03">3:00 </option><option value="04">4:00 </option>
-								<option value="05">5:00 </option><option value="06">6:00 </option>
+								<option value="" disabled selected> שעה </option>
+								<option ng-value="07">07 </option><option ng-value="08">08 </option>
+								<option ng-value="09">09 </option><option value="10">10 </option><option value="11">11 </option>
+								<option ng-value="12">12 </option>
+								<option ng-value="13">13 </option>
+								<option ng-value="14">14 </option>
+								<option ng-value="15">15 </option>
+								<option ng-value="16">16 </option>
+								<option ng-value="17">17 </option>
+								<option ng-value="18">18 </option>
+								<option ng-value="19">19 </option>
+								<option ng-value="20">20 </option>
+								<option ng-value="21">21 </option>
+								<option ng-value="22">22 </option>
+								<option ng-value="23">23 </option>
+								<option ng-value="00">00 </option>
+								<option ng-value="01">01 </option><option ng-value="02">02 </option><option ng-value="03">03 </option><option ng-value="04">04 </option><option ng-value="05">05 </option><option ng-value="06">06 </option>
 							</select>
 
 						</div>
@@ -575,7 +581,7 @@
 						</div>
 						<div ></div>
 					</div>
-					<div id={{x.id}} class="table-div-raw" ng-repeat="x in filtered = (tremps | filter: query :true| orderBy: 'minutes' |orderBy: 'hour')">
+					<div id={{x.id}} class="table-div-raw" ng-repeat="x in filtered = (tremps | filter: query :true| orderBy: 'minutes' |orderBy: 'hour':true)">
 
 						<div ng-cloak>
 							{{x.src}}
@@ -587,7 +593,7 @@
 							{{x.day}}/{{x.month}}
 						</div>
 						<div ng-cloak>
-							{{x.hour}}:{{x.minutes}}
+						{{x.hour}}:{{x.minutes}}
 						</div>
 						<div ng-cloak>
 							{{x.payment}} <span>₪</span>
@@ -650,5 +656,6 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 		<script src="angular-route.min.js"></script>
 		<script src="myscript.js"></script>
+
 	</body>
 </html>
